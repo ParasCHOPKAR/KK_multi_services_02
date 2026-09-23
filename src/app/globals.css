@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-kk-blue: #1a3c63;
-  --color-kk-blue-light: #255287;
+  --color-kk-blue: #0b1c3d;
+  --color-kk-blue-light: #162b55;
   --color-kk-red: #a81c25;
   --color-kk-red-light: #c2212a;
-  --color-kk-teal: #1a7b8e;
-  --color-kk-teal-light: #219eb5;
+  --color-kk-teal: #00A99D;
+  --color-kk-teal-light: #20C2B7;
   --font-sans: var(--font-inter);
   --animate-shimmer: shimmer 3s infinite;
 }

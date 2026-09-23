@@ -39,7 +39,7 @@ export default function HomePage() {
   return (
     <main id="top" className="min-h-screen font-sans bg-white text-slate-900">
       {/* Top Bar */}
-      <div className="bg-kk-blue text-white text-xs py-2 hidden md:block">
+      <div className="bg-kk-teal text-white text-xs py-2 hidden md:block">
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 flex justify-between items-center">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5 font-medium"><Clock className="w-3.5 h-3.5" /> 24/7 Emergency Service</span>
@@ -61,48 +61,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <HeroSlider />
 
-      {/* Features Bar */}
-      <section className="bg-kk-blue text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap lg:flex-nowrap justify-between gap-6">
-            <div className="flex items-center gap-4 w-full md:w-auto">
-              <Home className="w-8 h-8 opacity-80" />
-              <div>
-                <h4 className="font-bold text-sm lg:text-base">Same Day Service</h4>
-                <p className="text-xs text-white/60">When You Need It</p>
-              </div>
-            </div>
-            <div className="hidden lg:block w-px h-10 bg-white/10"></div>
-            <div className="flex items-center gap-4 w-full md:w-auto">
-              <Users className="w-8 h-8 opacity-80" />
-              <div>
-                <h4 className="font-bold text-sm lg:text-base">Trained & Verified<br/>Technicians</h4>
-              </div>
-            </div>
-            <div className="hidden lg:block w-px h-10 bg-white/10"></div>
-            <div className="flex items-center gap-4 w-full md:w-auto">
-              <Settings className="w-8 h-8 opacity-80" />
-              <div>
-                <h4 className="font-bold text-sm lg:text-base">Genuine Spare Parts</h4>
-              </div>
-            </div>
-            <div className="hidden lg:block w-px h-10 bg-white/10"></div>
-            <div className="flex items-center gap-4 w-full md:w-auto">
-              <Wallet className="w-8 h-8 opacity-80" />
-              <div>
-                <h4 className="font-bold text-sm lg:text-base">Transparent Pricing</h4>
-              </div>
-            </div>
-            <div className="hidden lg:block w-px h-10 bg-white/10"></div>
-            <div className="flex items-center gap-4 w-full md:w-auto">
-              <Headset className="w-8 h-8 opacity-80" />
-              <div>
-                <h4 className="font-bold text-sm lg:text-base">Dedicated Support</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Services Section */}
       <section id="services" className="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
@@ -155,6 +114,28 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-kk-teal/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative w-full h-48 lg:h-52 mb-6 bg-slate-50/50 rounded-2xl overflow-hidden group-hover:bg-white transition-colors duration-500 flex items-center justify-center">
+                <Image src="/images/appliance_ac_1789636637732.jpg" alt="Air Conditioner" fill className="object-contain p-6 mix-blend-multiply group-hover:scale-110 transition-transform duration-700" />
+              </div>
+              
+              <div className="relative z-10 flex-grow flex flex-col">
+                <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-kk-teal transition-colors">Air Conditioner</h3>
+                <p className="text-sm text-slate-500 mb-6 line-clamp-2">Premium AC service & repair for ultimate comfort.</p>
+                <div className="mt-auto flex items-center justify-between border-t border-slate-100 pt-4">
+                  <span className="text-sm font-bold text-kk-blue group-hover:text-kk-teal transition-colors flex items-center gap-1">
+                    Book Now <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                  </span>
+                  <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-kk-teal group-hover:text-white text-slate-400 transition-all duration-300">
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Service 2 */}
+            <div className="group relative bg-white rounded-3xl p-6 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 cursor-pointer overflow-hidden border border-slate-100 flex flex-col h-full hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-kk-teal/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative w-full h-48 lg:h-52 mb-6 bg-slate-50/50 rounded-2xl overflow-hidden group-hover:bg-white transition-colors duration-500 flex items-center justify-center">
                 <Image src="/images/appliance_fridge_1789636595538.jpg" alt="Refrigerator" fill className="object-contain p-6 mix-blend-multiply group-hover:scale-110 transition-transform duration-700" />
               </div>
               
@@ -172,7 +153,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Service 2 */}
+            {/* Service 3 */}
             <div className="group relative bg-white rounded-3xl p-6 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 cursor-pointer overflow-hidden border border-slate-100 flex flex-col h-full hover:-translate-y-2">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-kk-teal/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
@@ -194,7 +175,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Service 3 */}
+            {/* Service 4 */}
             <div className="group relative bg-white rounded-3xl p-6 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 cursor-pointer overflow-hidden border border-slate-100 flex flex-col h-full hover:-translate-y-2">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-kk-teal/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
@@ -205,28 +186,6 @@ export default function HomePage() {
               <div className="relative z-10 flex-grow flex flex-col">
                 <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-kk-teal transition-colors">Microwave</h3>
                 <p className="text-sm text-slate-500 mb-6 line-clamp-2">Quick and secure fixes for all heating issues.</p>
-                <div className="mt-auto flex items-center justify-between border-t border-slate-100 pt-4">
-                  <span className="text-sm font-bold text-kk-blue group-hover:text-kk-teal transition-colors flex items-center gap-1">
-                    Book Now <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                  </span>
-                  <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-kk-teal group-hover:text-white text-slate-400 transition-all duration-300">
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Service 4 */}
-            <div className="group relative bg-white rounded-3xl p-6 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 cursor-pointer overflow-hidden border border-slate-100 flex flex-col h-full hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-kk-teal/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              <div className="relative w-full h-48 lg:h-52 mb-6 bg-slate-50/50 rounded-2xl overflow-hidden group-hover:bg-white transition-colors duration-500 flex items-center justify-center">
-                <Image src="/images/appliance_ac_1789636637732.jpg" alt="Air Conditioner" fill className="object-contain p-6 mix-blend-multiply group-hover:scale-110 transition-transform duration-700" />
-              </div>
-              
-              <div className="relative z-10 flex-grow flex flex-col">
-                <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-kk-teal transition-colors">Air Conditioner</h3>
-                <p className="text-sm text-slate-500 mb-6 line-clamp-2">Premium AC service & repair for ultimate comfort.</p>
                 <div className="mt-auto flex items-center justify-between border-t border-slate-100 pt-4">
                   <span className="text-sm font-bold text-kk-blue group-hover:text-kk-teal transition-colors flex items-center gap-1">
                     Book Now <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
@@ -264,189 +223,123 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Our Work Section */}
-      <section id="about" className="py-20 bg-slate-50 relative z-0">
+      {/* Why Choose Us & How It Works Combined Section */}
+      <section id="about" className="py-16 lg:py-24 bg-kk-blue text-white relative z-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-start mb-12">
+          <div className="grid lg:grid-cols-3 gap-12 lg:gap-8 items-center">
             
             {/* Left Column: Text & Features */}
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="h-0.5 w-8 bg-kk-teal"></div>
-                <h4 className="text-sm font-bold tracking-wider text-slate-700 uppercase">Our Work</h4>
-              </div>
-              <h2 className="text-4xl lg:text-5xl font-extrabold text-[#0b1c3d] leading-[1.1] mb-6">
-                Reliable Home<br/><span className="text-kk-teal">Appliance Repair.</span>
+            <div className="lg:col-span-1">
+              <h4 className="text-xs font-bold tracking-wider text-kk-teal uppercase mb-4">Why Choose Us</h4>
+              <h2 className="text-3xl lg:text-4xl font-extrabold text-white leading-[1.2] mb-6">
+                More Than Just a Repair Service
               </h2>
-              <p className="text-slate-600 text-lg mb-10 leading-relaxed max-w-md">
-                Fast, efficient, and dependable repair solutions for all your home appliances.
+              <p className="text-slate-300 text-sm lg:text-base mb-8 leading-relaxed">
+                We're not just technicians — we're your trusted appliance care partners. Our focus is on quality service, honest pricing and your complete satisfaction.
               </p>
               
-              <div className="space-y-8">
-                <div className="flex items-start gap-5 group">
-                  <div className="w-14 h-14 bg-kk-teal rounded-full flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 bg-kk-teal rounded-full flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-white" />
+                  </div>
+                  <span className="text-sm font-medium text-slate-200">Skilled & background-verified technicians</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 bg-kk-teal rounded-full flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-white" />
+                  </div>
+                  <span className="text-sm font-medium text-slate-200">Genuine spare parts</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 bg-kk-teal rounded-full flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-white" />
+                  </div>
+                  <span className="text-sm font-medium text-slate-200">Quick response & on-time service</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 bg-kk-teal rounded-full flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-white" />
+                  </div>
+                  <span className="text-sm font-medium text-slate-200">Clean, safe and professional service</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 bg-kk-teal rounded-full flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-white" />
+                  </div>
+                  <span className="text-sm font-medium text-slate-200">Service for homes, offices, shops & institutions</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Middle Column: Video */}
+            <div className="lg:col-span-1 hidden lg:flex justify-center h-full">
+               <div className="relative w-[120%] h-[120%] ml-[-10%] z-10 rounded-3xl overflow-hidden">
+                 <video
+                   autoPlay
+                   loop
+                   muted
+                   playsInline
+                   className="w-full h-full object-cover opacity-80"
+                 >
+                   <source src="/images/wasching_masching_repair.mp4" type="video/mp4" />
+                 </video>
+                 <div className="absolute inset-0 bg-gradient-to-t from-kk-blue via-transparent to-transparent"></div>
+               </div>
+            </div>
+            
+            {/* Right Column: How It Works */}
+            <div className="lg:col-span-1 lg:pl-8">
+              <h4 className="text-xs font-bold tracking-wider text-kk-teal uppercase mb-4">How It Works</h4>
+              <h2 className="text-3xl lg:text-4xl font-extrabold text-white leading-[1.2] mb-10">
+                Simple Steps to Get Your Appliance Fixed
+              </h2>
+              
+              <div className="space-y-10">
+                {/* Step 1 */}
+                <div className="flex gap-6">
+                  <div className="w-14 h-14 rounded-full border border-white/20 bg-transparent flex items-center justify-center shrink-0">
+                    <Calendar className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-6 h-6 bg-kk-teal rounded-full flex items-center justify-center text-xs font-bold text-white">1</div>
+                      <h4 className="font-bold text-white text-xl">Book</h4>
+                    </div>
+                    <p className="text-sm text-slate-300 leading-relaxed">Choose your service and schedule a convenient time.</p>
+                  </div>
+                </div>
+                
+                {/* Step 2 */}
+                <div className="flex gap-6">
+                  <div className="w-14 h-14 rounded-full border border-white/20 bg-transparent flex items-center justify-center shrink-0">
+                    <Search className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-6 h-6 bg-kk-teal rounded-full flex items-center justify-center text-xs font-bold text-white">2</div>
+                      <h4 className="font-bold text-white text-xl">Inspect</h4>
+                    </div>
+                    <p className="text-sm text-slate-300 leading-relaxed">Our technician checks the issue and suggests the best solution.</p>
+                  </div>
+                </div>
+                
+                {/* Step 3 */}
+                <div className="flex gap-6">
+                  <div className="w-14 h-14 rounded-full border border-white/20 bg-transparent flex items-center justify-center shrink-0">
                     <Wrench className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 text-lg mb-1">Expert Technicians</h4>
-                    <p className="text-slate-500 text-sm leading-relaxed">Skilled professionals to fix it right the first time.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-5 group">
-                  <div className="w-14 h-14 bg-kk-teal rounded-full flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-lg mb-1">Quick Response</h4>
-                    <p className="text-slate-500 text-sm leading-relaxed">We respond fast and value your time.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-5 group">
-                  <div className="w-14 h-14 bg-kk-teal rounded-full flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                    <ShieldCheck className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-lg mb-1">Quality Service</h4>
-                    <p className="text-slate-500 text-sm leading-relaxed">Reliable repairs with long-lasting results.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-5 group">
-                  <div className="w-14 h-14 bg-kk-teal rounded-full flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
-                    <Wallet className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-lg mb-1">Affordable Pricing</h4>
-                    <p className="text-slate-500 text-sm leading-relaxed">Transparent pricing with no hidden costs.</p>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-6 h-6 bg-kk-teal rounded-full flex items-center justify-center text-xs font-bold text-white">3</div>
+                      <h4 className="font-bold text-white text-xl">Repair</h4>
+                    </div>
+                    <p className="text-sm text-slate-300 leading-relaxed">We fix it with genuine parts and ensure it works perfectly.</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            {/* Right Column: Image Grid */}
-            <div className="grid grid-cols-3 gap-4 h-full">
-              {/* Top large video */}
-              <div className="col-span-3 relative h-[300px] lg:h-[400px] rounded-2xl overflow-hidden shadow-lg group">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                >
-                  <source src="/Man_repairing_refrigerator_1080p_20260918173258.mp4" type="video/mp4" />
-                </video>
-              </div>
-              {/* Bottom 3 small images */}
-              <div className="col-span-1 relative h-32 lg:h-40 rounded-2xl overflow-hidden shadow-md group">
-                <Image src="/images/appliance_washing_machine_1789636610541.jpg" alt="Washing Machine Repair" fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              <div className="col-span-1 relative h-32 lg:h-40 rounded-2xl overflow-hidden shadow-md group">
-                <Image src="/images/appliance_microwave_1789636624228.jpg" alt="Microwave Repair" fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              <div className="col-span-1 relative h-32 lg:h-40 rounded-2xl overflow-hidden shadow-md group">
-                <Image src="/images/appliance_ac_1789636637732.jpg" alt="AC Service" fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-              </div>
-            </div>
-          </div>
-          
-          {/* Bottom Promise Banner */}
-          <div className="bg-[#0b1c3d] rounded-2xl p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all">
-            <div className="absolute right-0 top-0 w-1/3 h-full bg-kk-teal -skew-x-12 translate-x-10 group-hover:translate-x-6 transition-transform"></div>
-            
-            <div className="flex items-center gap-6 relative z-10 w-full sm:w-auto">
-              <div className="w-16 h-16 border-2 border-white/20 rounded-xl flex items-center justify-center shrink-0">
-                <div className="relative">
-                  <Home className="w-8 h-8 text-white opacity-50" strokeWidth={1} />
-                  <Wrench className="w-5 h-5 text-kk-teal absolute bottom-0 right-0 -mr-2 -mb-2 bg-[#0b1c3d] rounded-full p-0.5" />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl lg:text-2xl font-bold text-white">
-                  Quality Repairs. Happy Homes. <span className="text-kk-teal font-medium ml-1">That's Our Promise.</span>
-                </h3>
-              </div>
-            </div>
-            
-            <div className="relative z-10 shrink-0 self-end sm:self-center pr-6">
-              <ArrowRight className="w-8 h-8 text-white group-hover:translate-x-2 transition-transform" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h4 className="text-sm font-bold tracking-wider text-slate-700 uppercase mb-4 relative inline-block">
-              How It Works
-              <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-kk-teal"></span>
-            </h4>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-[#0b1c3d] leading-[1.1] mt-4">
-              Simple Process.<br/><span className="text-kk-teal">Seamless Experience.</span>
-            </h2>
-          </div>
-          
-          <div className="relative">
-            {/* Connecting dashed line (hidden on mobile, visible on md+) */}
-            <div className="hidden md:block absolute top-[44px] left-[10%] right-[10%] h-0.5 border-t-2 border-dashed border-slate-200 z-0"></div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-4 relative z-10">
-              
-              {/* Step 1 */}
-              <div className="flex flex-col items-center text-center group">
-                <div className="w-24 h-24 bg-kk-teal rounded-full flex items-center justify-center text-white shadow-[0_0_0_8px_rgba(255,255,255,1)] relative z-10 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 mb-6">
-                  <Phone className="w-10 h-10" />
-                </div>
-                <div className="text-kk-teal font-extrabold text-xl mb-2">01</div>
-                <h4 className="font-bold text-slate-900 text-lg mb-2">Contact Us</h4>
-                <p className="text-sm text-slate-500 leading-relaxed max-w-[200px]">Share your requirements</p>
-              </div>
-              
-              {/* Step 2 */}
-              <div className="flex flex-col items-center text-center group">
-                <div className="w-24 h-24 bg-kk-teal rounded-full flex items-center justify-center text-white shadow-[0_0_0_8px_rgba(255,255,255,1)] relative z-10 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 mb-6">
-                  <Search className="w-10 h-10" />
-                </div>
-                <div className="text-kk-teal font-extrabold text-xl mb-2">02</div>
-                <h4 className="font-bold text-slate-900 text-lg mb-2">Inspection</h4>
-                <p className="text-sm text-slate-500 leading-relaxed max-w-[200px]">We analyze and understand the needs</p>
-              </div>
-              
-              {/* Step 3 */}
-              <div className="flex flex-col items-center text-center group">
-                <div className="w-24 h-24 bg-kk-teal rounded-full flex items-center justify-center text-white shadow-[0_0_0_8px_rgba(255,255,255,1)] relative z-10 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 mb-6">
-                  <FileText className="w-10 h-10" />
-                </div>
-                <div className="text-kk-teal font-extrabold text-xl mb-2">03</div>
-                <h4 className="font-bold text-slate-900 text-lg mb-2">Quote</h4>
-                <p className="text-sm text-slate-500 leading-relaxed max-w-[200px]">Get transparent and best quotation</p>
-              </div>
-              
-              {/* Step 4 */}
-              <div className="flex flex-col items-center text-center group">
-                <div className="w-24 h-24 bg-kk-teal rounded-full flex items-center justify-center text-white shadow-[0_0_0_8px_rgba(255,255,255,1)] relative z-10 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 mb-6">
-                  <Settings className="w-10 h-10" />
-                </div>
-                <div className="text-kk-teal font-extrabold text-xl mb-2">04</div>
-                <h4 className="font-bold text-slate-900 text-lg mb-2">Service Execution</h4>
-                <p className="text-sm text-slate-500 leading-relaxed max-w-[200px]">Our experts get the job done</p>
-              </div>
-              
-              {/* Step 5 */}
-              <div className="flex flex-col items-center text-center group">
-                <div className="w-24 h-24 bg-kk-teal rounded-full flex items-center justify-center text-white shadow-[0_0_0_8px_rgba(255,255,255,1)] relative z-10 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 mb-6">
-                  <Headset className="w-10 h-10" />
-                </div>
-                <div className="text-kk-teal font-extrabold text-xl mb-2">05</div>
-                <h4 className="font-bold text-slate-900 text-lg mb-2">Support</h4>
-                <p className="text-sm text-slate-500 leading-relaxed max-w-[200px]">We ensure complete satisfaction</p>
-              </div>
-              
-            </div>
           </div>
         </div>
       </section>
@@ -769,7 +662,7 @@ export default function HomePage() {
               <p className="text-slate-300 text-lg">Book a service request now and let our experts take care of the rest.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 shrink-0 w-full md:w-auto">
-              <a href="#" className="bg-kk-red hover:bg-kk-red-light text-white px-8 py-4 rounded-md font-bold transition-all flex items-center justify-center gap-3">
+              <a href="#" className="bg-kk-teal hover:bg-kk-teal-light text-white px-8 py-4 rounded-md font-bold transition-all flex items-center justify-center gap-3">
                 <Calendar className="w-5 h-5" /> Book a Service
               </a>
               <a href="tel:+919876543210" className="bg-transparent border border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-md font-bold transition-all flex items-center justify-center gap-3">
@@ -781,6 +674,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
+      {/* Footer */}
       <footer 
         className="pt-20 pb-10 border-t border-slate-200 bg-cover bg-center bg-no-repeat relative bg-[url('/images/footer_img_background.png')] md:bg-[url('/images/footer-01.png')]"
       >
@@ -790,7 +684,7 @@ export default function HomePage() {
             {/* Column 1: Brand & Contact */}
             <div className="space-y-6">
               <Link href="/" className="inline-block">
-                <Image src="/images/logo.jpg" alt="KK Multi Services Logo" width={200} height={60} className="h-12 md:h-14 w-auto object-contain" priority />
+                <Image src="/images/logo_footer.png" alt="KK Multi Services Logo" width={200} height={60} className="h-12 md:h-14 w-auto object-contain" priority />
               </Link>
               <p className="text-slate-600 text-sm leading-relaxed">
                 Your trusted partner for professional home appliance repair services. Fast, efficient, and reliable solutions across the region.

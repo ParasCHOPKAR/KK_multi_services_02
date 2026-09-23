@@ -10,36 +10,35 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="w-full bg-white border-b border-slate-100 sticky top-0 z-50">
+      <nav className="w-full bg-kk-blue border-b border-white/10 sticky top-0 z-50">
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex justify-between items-center py-2 md:py-3">
             {/* Logo */}
             <div className="flex shrink-0">
               <Link href="/" className="flex items-center">
-                <Image src="/images/logo.jpg" alt="KK Multi Services Logo" width={240} height={70} className="h-12 md:h-14 w-auto object-contain" priority />
+                <Image src="/images/Logo_02.png" alt="KK Multi Services Logo" width={240} height={70} className="h-12 md:h-14 w-auto object-contain" priority />
               </Link>
             </div>
 
             {/* Nav Links - Desktop */}
             <div className="hidden lg:flex flex-1 justify-center items-center space-x-6 xl:space-x-8">
-              <Link href="#top" className="text-sm font-bold text-slate-900 relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-red">Home</Link>
-              <Link href="#about" className="text-sm font-medium text-slate-600 hover:text-kk-blue transition-colors">About Us</Link>
-              <Link href="#services" className="text-sm font-medium text-slate-600 hover:text-kk-blue transition-colors">Services</Link>
-              <Link href="#areas" className="text-sm font-medium text-slate-600 hover:text-kk-blue transition-colors">Areas We Serve</Link>
-              <Link href="#contact" className="text-sm font-medium text-slate-600 hover:text-kk-blue transition-colors">Contact Us</Link>
+              <Link href="#top" className="text-sm font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal">Home</Link>
+              <Link href="#about" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">About</Link>
+              <Link href="#services" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Services</Link>
+              <Link href="#areas" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Areas</Link>
+              <Link href="#contact" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</Link>
             </div>
 
             {/* CTA & Mobile Toggle */}
             <div className="flex items-center justify-end gap-4 md:gap-6">
               <div className="hidden md:flex items-center gap-6">
-                <a href="tel:+919876543210" className="flex items-center gap-2 text-slate-700 font-bold hover:text-kk-blue transition-colors">
-                  <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center">
-                    <Phone className="w-4 h-4" />
-                  </div>
+                <a href="tel:+919876543210" className="flex items-center gap-2 text-white font-bold hover:text-kk-teal transition-colors">
+                  <Phone className="w-4 h-4 text-kk-teal" />
                   <span className="hidden xl:block">+91 98765 43210</span>
                 </a>
-                <a href="#" className="hidden lg:flex bg-kk-red hover:bg-kk-red-light text-white px-6 py-3 rounded-md font-bold text-sm transition-all shadow-md hover:shadow-lg items-center gap-2">
-                  Get a Quote <ArrowRight className="w-4 h-4" />
+                <a href="#" className="hidden lg:flex bg-kk-teal hover:bg-kk-teal-light text-white px-6 py-2.5 rounded-md font-bold text-sm transition-all shadow-md hover:shadow-lg items-center gap-2">
+                  <div className="w-4 h-4 border-2 border-white rounded-sm flex items-center justify-center opacity-80"><div className="w-1.5 h-1.5 bg-white rounded-sm"></div></div>
+                  Book a Service
                 </a>
               </div>
               
@@ -63,7 +62,7 @@ export default function Navbar() {
       {/* Mobile Sidebar */}
       <div className={`fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white z-[70] transform transition-transform duration-300 ease-in-out lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} shadow-2xl`}>
         <div className="flex justify-between items-center p-5 border-b border-slate-100">
-          <Image src="/images/logo.jpg" alt="KK Multi Services Logo" width={150} height={44} className="h-10 w-auto object-contain" />
+          <Image src="/images/Logo_02.png" alt="KK Multi Services Logo" width={150} height={44} className="h-10 w-auto object-contain" />
           <button 
             className="p-2.5 text-slate-500 hover:text-kk-red transition-colors bg-slate-50 hover:bg-slate-100 rounded-full"
             onClick={() => setIsMobileMenuOpen(false)}
