@@ -1,19 +1,18 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { 
-  MapPin, 
-  Search, 
-  Phone, 
-  Clock, 
-  ShieldCheck, 
-  ArrowRight, 
-  ChevronRight, 
-  CheckCircle2, 
-  Sparkles, 
-  HelpCircle, 
-  ChevronDown, 
+import {
+  MapPin,
+  Search,
+  Phone,
+  Clock,
+  ShieldCheck,
+  ArrowRight,
+  ChevronRight,
+  CheckCircle2,
+  Sparkles,
   Navigation,
   Wrench,
   Zap
@@ -84,35 +83,15 @@ const puneLocalities: PuneArea[] = [
   { name: "Undri & Mohammed Wadi", pincode: "411060", zone: "central", zoneLabel: "Central & South", responseTime: "60–90 Mins", landmarks: "Corinthians Club, Bishop's School", popularFor: ["AC Service", "Washing Machine", "Geyser"] }
 ];
 
-const faqs = [
-  {
-    q: "Do you charge extra travel fees for distant locations like Hinjawadi Phase 3 or Chakan?",
-    a: "Never! We maintain mobile service vans with technicians stationed locally in West Pune, PCMC, East Pune, and Central Pune. There are zero extra travel or distance surcharge fees anywhere within our service radius."
-  },
-  {
-    q: "How fast can a technician arrive at my home?",
-    a: "In key hubs like Wakad, Hinjawadi, Baner, Pimple Saudagar, Kharadi, Kothrud, and Viman Nagar, our average arrival time is 45 to 60 minutes. In peripheral areas, we guarantee doorstep arrival within 90 minutes."
-  },
-  {
-    q: "Are your technicians permitted in private high-rise societies?",
-    a: "Yes. All our technicians carry official KK Multi Services company ID cards, uniform attire, and complete background-verified credentials required by society security and MyGate / NoBrokerHood gate passes."
-  },
-  {
-    q: "What if my specific society or locality is not listed?",
-    a: "If your area is anywhere in Pune, PCMC, or within 35 km of the metropolitan area, we service it! Simply call our hotline or submit an online request and we will dispatch the nearest technician."
-  }
-];
-
 export default function AreasPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedZone, setSelectedZone] = useState<string>("all");
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const filteredLocalities = useMemo(() => {
     return puneLocalities.filter((item) => {
       const matchesZone = selectedZone === "all" || item.zone === selectedZone;
       const query = searchQuery.toLowerCase().trim();
-      const matchesSearch = 
+      const matchesSearch =
         !query ||
         item.name.toLowerCase().includes(query) ||
         item.pincode.includes(query) ||
@@ -130,52 +109,76 @@ export default function AreasPage() {
       {/* Sticky Navbar */}
       <Navbar />
 
-      {/* Hero Header */}
-      <section className="relative bg-kk-blue text-white py-16 md:py-24 overflow-hidden border-b border-white/10">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-kk-teal/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute -bottom-20 left-10 w-80 h-80 bg-kk-red/15 rounded-full blur-3xl pointer-events-none"></div>
+      {/* Hero Header - 16:4 Aspect Ratio */}
+      <section
+        className="relative text-white w-full aspect-[16/4] min-h-[440px] md:min-h-0 flex items-center overflow-hidden"
+        style={{ aspectRatio: "16 / 4" }}
+      >
+        {/* Background Image - Completely visible, 100% clear with zero overlay on the right side */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/area/hero_img_03.png"
+            alt="KK Multi Services Pune Coverage Map"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* Left side background shadow for rich contrast behind text - strictly stops before the map/van */}
+          <div className="absolute inset-y-0 left-0 w-full sm:w-[55%] lg:w-[46%] bg-gradient-to-r from-[#020712] via-[#020712]/90 to-transparent pointer-events-none z-[1]" />
+          <div className="absolute inset-y-0 left-0 w-72 sm:w-96 bg-[#020712]/60 blur-3xl pointer-events-none z-[1]" />
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-6 sm:py-8 md:py-8">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 mb-6">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-200 mb-3 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-kk-teal" />
             <span className="text-kk-teal">Areas We Serve</span>
           </div>
 
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-bold text-white mb-6 backdrop-blur-sm">
-              <Navigation className="w-3.5 h-3.5 text-kk-teal" />
-              <span>Pune & PCMC Rapid Doorstep Coverage</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left Content (6 Cols, constrained width to avoid touching map pins) */}
+            <div className="lg:col-span-6 max-w-lg">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-xs font-bold text-white mb-2.5 backdrop-blur-md shadow-sm">
+                <Navigation className="w-3.5 h-3.5 text-kk-teal" />
+                <span>Pune & PCMC Rapid Doorstep Coverage</span>
+              </div>
+
+              <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-[34px] xl:text-[38px] font-black text-white tracking-tight leading-[1.2] mb-3 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+                Appliance Repair In <br className="hidden sm:inline" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-kk-teal via-cyan-300 to-white">
+                  Every Corner of Pune
+                </span>
+              </h1>
+
+              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium mb-4 max-w-md drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
+                We operate dedicated mobile service vans across 40+ Pune &amp; PCMC neighborhoods. Enjoy 45–60 minute express arrival, zero distance surcharges, and factory-genuine spare parts.
+              </p>
+
+              {/* Quick search input in hero */}
+              <div className="relative max-w-md shadow-2xl">
+                <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <input
+                  type="text"
+                  placeholder="Search your area or pincode (e.g. Wakad, Hinjawadi)..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-16 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-xs sm:text-sm font-medium focus:outline-none shadow-lg shadow-black/25"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400 hover:text-slate-700 bg-slate-100 px-2 py-1 rounded"
+                  >
+                    Clear
+                  </button>
+                )}
+              </div>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15] mb-6">
-              Appliance Repair In Every <span className="text-transparent bg-clip-text bg-gradient-to-r from-kk-teal via-cyan-300 to-white">Corner of Pune</span>
-            </h1>
-
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-8">
-              We operate dedicated mobile service vans across 40+ Pune & PCMC neighborhoods. Enjoy 45–60 minute express arrival, zero distance surcharges, and factory-genuine spare parts.
-            </p>
-
-            {/* Quick search input in hero */}
-            <div className="relative max-w-xl">
-              <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
-              <input 
-                type="text"
-                placeholder="Search your area or pincode (e.g. Wakad, Hinjawadi, 411057, Kharadi)..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-2xl bg-white text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none shadow-2xl shadow-slate-950/20"
-              />
-              {searchQuery && (
-                <button 
-                  onClick={() => setSearchQuery("")}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400 hover:text-slate-700 bg-slate-100 px-2 py-1 rounded"
-                >
-                  Clear
-                </button>
-              )}
-            </div>
+            {/* Right Column: 6 Cols Spacer so the background map & KK service van shine through unobstructed */}
+            <div className="lg:col-span-6 hidden lg:block pointer-events-none" />
           </div>
         </div>
       </section>
@@ -184,7 +187,7 @@ export default function AreasPage() {
       <section className="py-6 bg-white border-b border-slate-200 sticky top-[68px] md:top-[76px] z-40 shadow-sm backdrop-blur-md bg-white/95">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            
+
             <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 scrollbar-none">
               {[
                 { id: "all", label: `All Zones (${puneLocalities.length})` },
@@ -196,11 +199,10 @@ export default function AreasPage() {
                 <button
                   key={zone.id}
                   onClick={() => setSelectedZone(zone.id)}
-                  className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${
-                    selectedZone === zone.id
-                      ? "bg-kk-blue text-white shadow-md shadow-kk-blue/20"
-                      : "bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900"
-                  }`}
+                  className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap cursor-pointer ${selectedZone === zone.id
+                    ? "bg-kk-blue text-white shadow-md shadow-kk-blue/20"
+                    : "bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900"
+                    }`}
                 >
                   {zone.label}
                 </button>
@@ -224,7 +226,7 @@ export default function AreasPage() {
             <p className="text-xs text-slate-500 mb-5">
               Don't worry! We cover all areas across Pune & PCMC. Call our dispatch manager directly to book your technician.
             </p>
-            <a 
+            <a
               href="tel:+919876543210"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-kk-teal text-white font-bold text-sm shadow-md hover:bg-kk-teal-light transition-all"
             >
@@ -234,7 +236,7 @@ export default function AreasPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredLocalities.map((item) => (
-              <div 
+              <div
                 key={item.name}
                 className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-md shadow-slate-900/5 hover:shadow-xl hover:border-kk-teal/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
               >
@@ -277,7 +279,7 @@ export default function AreasPage() {
 
                 {/* Card CTA */}
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
-                  <a 
+                  <a
                     href="tel:+919876543210"
                     className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-kk-blue transition-colors"
                     aria-label={`Call technician for ${item.name}`}
@@ -285,7 +287,7 @@ export default function AreasPage() {
                     <Phone className="w-4 h-4" />
                   </a>
 
-                  <Link 
+                  <Link
                     href={`/contact#book`}
                     className="flex-1 text-center py-2.5 px-4 rounded-xl bg-kk-teal hover:bg-kk-teal-light text-white text-xs font-bold transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-1.5"
                   >
@@ -337,76 +339,6 @@ export default function AreasPage() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-slate-900/5 border border-slate-100">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div>
-              <span className="text-xs font-bold text-kk-teal uppercase tracking-wider block mb-1">
-                Central Operations & Hub
-              </span>
-              <h3 className="text-2xl font-black text-[#0b1c3d]">Pune Metropolitan Service Network</h3>
-              <p className="text-xs sm:text-sm text-slate-500 mt-1">Dispatched daily from Sector 45 Central Service Hub across all 4 zones.</p>
-            </div>
-            <a 
-              href="tel:+919876543210"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-kk-blue hover:bg-kk-blue-light text-white text-xs font-bold transition-all shadow-md shrink-0"
-            >
-              <Phone className="w-4 h-4 text-kk-teal" /> Call Dispatch Desk
-            </a>
-          </div>
-
-          <div className="w-full h-80 sm:h-96 rounded-2xl overflow-hidden shadow-inner border border-slate-200">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.0921705646447!2d73.7721601!3d18.5698829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf1ba5c42d25%3A0xae3383c823833690!2sKK%20Multi%20Services!5e0!3m2!1sen!2sin!4v1789969080377!5m2!1sen!2sin" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen={false} 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-kk-teal/10 text-kk-teal text-xs font-bold mb-3 uppercase tracking-wider">
-              <HelpCircle className="w-3.5 h-3.5" /> Pune Service FAQ
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0b1c3d]">
-              Frequently Asked Questions About Local Coverage
-            </h3>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <div 
-                key={idx} 
-                className="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm"
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-6 py-5 text-left font-bold text-slate-800 flex justify-between items-center gap-4 hover:text-kk-blue transition-colors"
-                >
-                  <span className="text-sm sm:text-base">{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-kk-teal shrink-0 transition-transform duration-200 ${openFaq === idx ? "rotate-180" : ""}`} />
-                </button>
-                {openFaq === idx && (
-                  <div className="px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
-            ))}
           </div>
         </div>
       </section>

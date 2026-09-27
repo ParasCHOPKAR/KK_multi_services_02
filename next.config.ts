@@ -9,6 +9,25 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/amc-annual-cmc-comprehensive-maintenance-contract-services-pune.html',
+        destination: '/amc',
+        permanent: true,
+      },
+      {
+        source: '/amc-services',
+        destination: '/amc',
+        permanent: true,
+      },
+      {
+        source: '/blog.html',
+        destination: '/blog',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

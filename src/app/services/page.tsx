@@ -147,8 +147,19 @@ const servicesList: ServiceItem[] = [
 ];
 
 const brandLogos = [
-  "LG", "Samsung", "Whirlpool", "Daikin", "Voltas", "Godrej", 
-  "Bosch", "IFB", "Panasonic", "Haier", "Carrier", "Hitachi", "Blue Star"
+  { name: "LG", src: "/images/logos/lg_01.png" },
+  { name: "Samsung", src: "/images/logos/samsung.png" },
+  { name: "Whirlpool", src: "/images/logos/Whirlpool_0111.jpg" },
+  { name: "Daikin", src: "/images/logos/daikin.png" },
+  { name: "Voltas", src: "/images/logos/voltas.png" },
+  { name: "Godrej", src: "/images/logos/godrej_01.jfif" },
+  { name: "Bosch", src: "/images/logos/bosch.png" },
+  { name: "Haier", src: "/images/logos/Haier-Logo.png" },
+  { name: "Hitachi", src: "/images/logos/Hitachi-Logo_011.png" },
+  { name: "Blue Star", src: "/images/logos/Blue_Star_Infotech_logo.svg.webp" },
+  { name: "Panasonic", src: "/images/logos/Panasonic_logo.webp" },
+  { name: "Mitsubishi Electric", src: "/images/logos/mitsubishi-electric.png" },
+  { name: "Onida", src: "/images/logos/Onida_Electronics.webp" }
 ];
 
 const faqs = [
@@ -359,23 +370,32 @@ export default function ServicesPage() {
       </section>
 
       {/* Multi-Brand Compatibility */}
-      <section className="py-12 bg-white border-y border-slate-200">
+      <section className="py-14 sm:py-16 bg-slate-50/70 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-widest text-kk-teal block mb-2">
             Multi-Brand Compatibility
           </span>
-          <h3 className="text-xl sm:text-2xl font-black text-[#0b1c3d] tracking-tight mb-8">
+          <h3 className="text-2xl sm:text-3xl font-black text-[#0b1c3d] tracking-tight mb-8 sm:mb-10">
             Certified Repair Across All Leading Appliance Brands
           </h3>
 
-          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 max-w-5xl mx-auto">
             {brandLogos.map((brand) => (
-              <span 
-                key={brand}
-                className="px-5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm font-extrabold text-slate-700 shadow-sm hover:border-kk-teal hover:text-kk-teal transition-colors"
+              <div 
+                key={brand.name}
+                className="h-16 sm:h-20 w-32 sm:w-40 px-3.5 sm:px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md hover:border-kk-teal/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center group"
+                title={brand.name}
               >
-                {brand}
-              </span>
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Image 
+                    src={brand.src} 
+                    alt={`${brand.name} Logo`} 
+                    width={130} 
+                    height={50} 
+                    className="max-h-9 sm:max-h-11 w-auto max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300" 
+                  />
+                </div>
+              </div>
             ))}
           </div>
         </div>
