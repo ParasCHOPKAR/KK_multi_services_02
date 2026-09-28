@@ -36,26 +36,15 @@ export default function HeroSlider() {
     <section 
       className="relative overflow-hidden transition-all duration-1000 ease-in-out"
     >
-      {/* Mobile Video */}
+      {/* Background Hero Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="md:hidden absolute inset-0 w-full h-full object-cover object-center z-0"
+        className="absolute inset-0 w-full h-full object-cover object-center z-0"
       >
-        <source src="/images/herovide0_mobile_02.mp4" type="video/mp4" />
-      </video>
-      
-      {/* Desktop Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="hidden md:block absolute inset-0 w-full h-full object-cover object-center z-0"
-      >
-        <source src="/images/Hero_01_bg_img.mp4" type="video/mp4" />
+        <source src="/images/home/kk_home_page_hero_011111.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay: strong vertical gradient on mobile for text contrast, lateral gradient on desktop */}
