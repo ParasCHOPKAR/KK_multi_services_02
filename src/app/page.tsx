@@ -291,11 +291,11 @@ export default function HomePage() {
                    loop
                    muted
                    playsInline
-                   className="w-full h-full object-cover opacity-85"
+                   className="w-full h-full object-cover"
                  >
-                   <source src="/images/wasching_masching_repair.mp4" type="video/mp4" />
+                   <source src="/images/home/kk_hone_page_0222.mp4" type="video/mp4" />
                  </video>
-                 <div className="absolute inset-0 bg-gradient-to-t from-kk-blue/80 via-transparent to-transparent"></div>
+                 <div className="absolute inset-0 bg-gradient-to-t from-kk-blue/60 via-transparent to-transparent"></div>
                </div>
             </div>
             
