@@ -147,18 +147,17 @@ export default function AboutPage() {
       {/* Sticky Navbar */}
       <Navbar />
 
-      {/* Hero Header - 16:4 Aspect Ratio */}
+      {/* Hero Header */}
       <section 
-        className="relative bg-kk-blue text-white w-full aspect-[16/4] min-h-[460px] md:min-h-0 flex items-center overflow-hidden border-b border-white/10"
-        style={{ aspectRatio: "16 / 4" }}
+        className="relative bg-kk-blue text-white w-full min-h-[460px] md:min-h-[400px] lg:min-h-[380px] xl:min-h-[420px] py-6 sm:py-8 lg:py-10 flex items-center overflow-hidden border-b border-white/10"
       >
         {/* Ambient background glow */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-kk-teal/20 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-20 left-10 w-80 h-80 bg-kk-red/15 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-4 sm:py-6 md:py-6 lg:py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           {/* Breadcrumb & Service Scope Switcher */}
-          <div className="flex flex-wrap items-center justify-between gap-2.5 mb-2.5">
+          <div className="flex flex-wrap items-center justify-between gap-2.5 mb-3 sm:mb-4">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5 text-kk-teal" />
@@ -166,20 +165,20 @@ export default function AboutPage() {
             </div>
 
             {/* Quick Service Links */}
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-bold text-white transition-colors backdrop-blur-sm"
+                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-[11px] sm:text-xs font-bold text-white transition-colors backdrop-blur-sm"
               >
                 <Home className="w-3 h-3 text-kk-teal" />
-                <span>Residential Repairing Services</span>
+                <span>Residential Services</span>
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-bold text-white transition-colors backdrop-blur-sm"
+                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-[11px] sm:text-xs font-bold text-white transition-colors backdrop-blur-sm"
               >
                 <Building className="w-3 h-3 text-cyan-300" />
-                <span>Commercial Repairing Services</span>
+                <span>Commercial Services</span>
               </Link>
             </div>
           </div>
@@ -187,12 +186,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             {/* Left Content (7 Cols) */}
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/10 border border-white/15 text-xs font-bold text-kk-teal mb-2 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/10 border border-white/15 text-[11px] sm:text-xs font-bold text-kk-teal mb-2 backdrop-blur-sm">
                 <Sparkles className="w-3.5 h-3.5 text-kk-teal" />
                 <span>KK Multi Services • Pune</span>
               </div>
 
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-[34px] xl:text-[38px] font-black text-white tracking-tight leading-[1.15] mb-2">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] xl:text-[38px] font-black text-white tracking-tight leading-[1.15] mb-2 sm:mb-2.5">
                 About <span className="text-transparent bg-clip-text bg-gradient-to-r from-kk-teal to-teal-300">KK Multi Services</span>
               </h1>
 
@@ -204,19 +203,19 @@ export default function AboutPage() {
                 Our techs are all friendly and will arrive in uniform with upfront price quotes before any work begins.
               </p>
 
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
                 <Link
                   href="/contact"
-                  className="px-5 py-2 sm:py-2.5 rounded-xl bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-xs sm:text-sm shadow-lg hover:shadow-kk-teal/30 hover:-translate-y-0.5 transition-all flex items-center gap-2 active:scale-95"
+                  className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-xs sm:text-sm shadow-lg hover:shadow-kk-teal/30 hover:-translate-y-0.5 transition-all flex items-center gap-2 active:scale-95"
                 >
                   <span>Contact Now</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </Link>
                 <a
                   href="tel:+919876543210"
-                  className="px-4 py-2 sm:py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs sm:text-sm transition-all flex items-center gap-2 backdrop-blur-sm"
+                  className="px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs sm:text-sm transition-all flex items-center gap-2 backdrop-blur-sm"
                 >
-                  <Phone className="w-4 h-4 text-kk-teal" />
+                  <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-kk-teal" />
                   <span>Call: +91 98765 43210</span>
                 </a>
               </div>
@@ -224,7 +223,7 @@ export default function AboutPage() {
 
             {/* Right Video Showcase Card (5 Cols) */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 aspect-[16/9] max-h-[220px] bg-slate-900 group">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 aspect-[16/9] max-h-[220px] lg:max-h-[240px] xl:max-h-[260px] bg-slate-900 group">
                 <video
                   autoPlay
                   loop
@@ -324,7 +323,7 @@ export default function AboutPage() {
       </section>
 
       {/* AMC / CMC Maintenance Contracts Section */}
-      <section className="relative py-16 md:py-24 bg-slate-50 overflow-hidden border-b border-slate-200/90">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-slate-50 overflow-hidden border-b border-slate-200/90">
         {/* Background Image: AMC_CMC_Section.png */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
@@ -338,61 +337,61 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent lg:hidden" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10 sm:space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8 sm:space-y-10 lg:space-y-12">
           {/* Top Row: Left Content & Right Appliances Area */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
             {/* Left Content (7 Cols) */}
-            <div className="lg:col-span-7 space-y-5">
+            <div className="lg:col-span-7 space-y-4 sm:space-y-5">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50/90 border border-teal-200/80 text-kk-teal text-xs font-black uppercase tracking-wider backdrop-blur-xs">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-teal-50/90 border border-teal-200/80 text-kk-teal text-[11px] sm:text-xs font-black uppercase tracking-wider backdrop-blur-xs">
                 <Settings className="w-3.5 h-3.5 text-kk-teal" />
                 <span>ANNUAL & COMPREHENSIVE MAINTENANCE SERVICES</span>
               </div>
 
               {/* Headline */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#0b1c3d] tracking-tight leading-[1.18]">
+              <h2 className="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-[40px] font-black text-[#0b1c3d] tracking-tight leading-[1.18]">
                 AMC (Annual <span className="text-kk-teal">Maintenance</span><br />
                 Contract) / CMC (Comprehensive<br />
                 <span className="text-kk-teal">Maintenance Contract</span>) Services
               </h2>
 
               {/* Description */}
-              <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-normal max-w-2xl">
+              <p className="text-xs sm:text-sm lg:text-[15px] text-slate-700 leading-relaxed font-normal max-w-2xl">
                 We undertake <strong>AMC (Annual Maintenance Contract)</strong> and <strong>CMC (Comprehensive Maintenance Contract)</strong> services for Air Conditioners (AC), Refrigerators (Fridge), Washing Machines, Microwave Ovens, Electric Geysers, Water Heaters, and Water Purifiers (Aquaguard) for all major brands across Pune, Maharashtra. Safeguarding your appliances and keeping them in top operating condition is our highest priority.
               </p>
 
               {/* 4 Feature Pills Row */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 max-w-xl">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                    <CheckCircle2 className="w-4 h-4" />
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-1 sm:pt-2 max-w-xl">
+                <div className="flex items-center gap-2 sm:gap-2.5">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
                   <div className="text-xs font-bold text-slate-900 leading-tight">
                     All Major<br /><span className="text-slate-500 font-normal">Brands</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
-                    <Wrench className="w-4 h-4" />
+                <div className="flex items-center gap-2 sm:gap-2.5">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                    <Wrench className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
                   <div className="text-xs font-bold text-slate-900 leading-tight">
                     Expert<br /><span className="text-slate-500 font-normal">Technicians</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center shrink-0">
-                    <Clock className="w-4 h-4" />
+                <div className="flex items-center gap-2 sm:gap-2.5">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center shrink-0">
+                    <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
                   <div className="text-xs font-bold text-slate-900 leading-tight">
                     Quick<br /><span className="text-slate-500 font-normal">Response</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
-                    <Award className="w-4 h-4" />
+                <div className="flex items-center gap-2 sm:gap-2.5">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                    <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
                   <div className="text-xs font-bold text-slate-900 leading-tight">
                     Genuine<br /><span className="text-slate-500 font-normal">Spare Parts</span>
@@ -402,51 +401,51 @@ export default function AboutPage() {
             </div>
 
             {/* Right Side: Spacer so the background appliances graphic displays cleanly */}
-            <div className="hidden lg:block lg:col-span-5 min-h-[240px]" />
+            <div className="hidden lg:block lg:col-span-5 min-h-[220px]" />
           </div>
 
           {/* Bottom Row: 3 Columns (AMC Card, CMC Card, 3 Stacked Stat Cards) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 xl:gap-6 items-stretch">
             {/* Column 1: AMC Card (5 Cols) */}
-            <div className="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-md flex flex-col justify-between">
+            <div className="lg:col-span-5 bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-5 xl:p-7 border border-slate-200 shadow-md flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-3.5 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#0b1c3d] text-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Calendar className="w-6 h-6 text-white" />
+                <div className="flex items-center gap-3 sm:gap-3.5 mb-3.5 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#0b1c3d] text-white flex items-center justify-center shrink-0 shadow-sm">
+                    <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-black text-[#0b1c3d]">
+                  <h3 className="text-lg sm:text-xl font-black text-[#0b1c3d]">
                     AMC — Annual<br />Maintenance Contract
                   </h3>
                 </div>
 
-                <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-5">
+                <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-4 sm:mb-5">
                   <strong>AMC</strong> refers to <strong>Annual Maintenance Contract</strong>. Under an AMC, clients avail scheduled routine health check-ups (3 to 4 visits/year) including deep pressure wet-jet pump cleaning, condenser and coil inspection, thermostat check, and piping safety.
                 </p>
 
                 {/* 2-Column Checklist */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2 border-t border-slate-100 text-xs text-slate-700 font-medium">
-                  <div className="space-y-2.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 pt-2 border-t border-slate-100 text-xs text-slate-700 font-medium">
+                  <div className="space-y-2 sm:space-y-2.5">
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-500 shrink-0" />
                       <span>Scheduled service visits (3–4 per year)</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-500 shrink-0" />
                       <span>Deep cleaning & performance check</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-500 shrink-0" />
                       <span>Covers all labor charges</span>
                     </div>
                   </div>
 
-                  <div className="space-y-2.5">
+                  <div className="space-y-2 sm:space-y-2.5">
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-500 shrink-0" />
                       <span>Zero inspection fees</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-500 shrink-0" />
                       <span>Contract period: 1 to 5 years</span>
                     </div>
                   </div>
@@ -455,41 +454,41 @@ export default function AboutPage() {
             </div>
 
             {/* Column 2: CMC Card (4 Cols) */}
-            <div className="lg:col-span-4 bg-[#edfbf9] rounded-3xl p-6 sm:p-7 border border-teal-200 shadow-md flex flex-col justify-between">
+            <div className="lg:col-span-4 bg-[#edfbf9] rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-5 xl:p-7 border border-teal-200 shadow-md flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-3.5 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-kk-teal text-white flex items-center justify-center shrink-0 shadow-sm">
-                    <Settings className="w-6 h-6 text-white" />
+                <div className="flex items-center gap-3 sm:gap-3.5 mb-3.5 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-kk-teal text-white flex items-center justify-center shrink-0 shadow-sm">
+                    <Settings className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-black text-[#0b1c3d]">
+                  <h3 className="text-lg sm:text-xl font-black text-[#0b1c3d]">
                     CMC — Comprehensive<br />Maintenance Contract
                   </h3>
                 </div>
 
-                <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed mb-5">
+                <p className="text-xs sm:text-[13px] text-slate-700 leading-relaxed mb-4 sm:mb-5">
                   <strong>CMC</strong> refers to <strong>Comprehensive Maintenance Contract</strong>. A CMC provides 360° total protection covering all scheduled services, unlimited complaint resolutions, plus complete coverage for spare parts, electric parts, and compressor replacement.
                 </p>
 
                 {/* 1-Column Checklist */}
                 <div className="space-y-2 pt-2 border-t border-teal-100 text-xs text-slate-800 font-medium">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 shrink-0" />
                     <span>Complete coverage (labor + spare parts + electric parts)</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 shrink-0" />
                     <span>Unlimited service visits & complaint resolutions</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 shrink-0" />
                     <span>Compressor replacement included</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 shrink-0" />
                     <span><strong>100% free</strong> refrigerant gas charging</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 shrink-0" />
                     <span>Zero surprise repair bills for the entire contract year</span>
                   </div>
                 </div>
@@ -497,54 +496,54 @@ export default function AboutPage() {
             </div>
 
             {/* Column 3: 3 Stacked Stat Cards (3 Cols) */}
-            <div className="lg:col-span-3 flex flex-col justify-between gap-3.5">
+            <div className="lg:col-span-3 flex flex-col justify-between gap-3 sm:gap-3.5">
               {/* Stat 1 */}
-              <div className="bg-emerald-50/80 border border-emerald-100 rounded-2xl p-4 sm:p-5 flex items-center gap-3.5 shadow-xs flex-1">
-                <div className="w-11 h-11 rounded-xl bg-emerald-100/90 text-emerald-700 flex items-center justify-center shrink-0">
-                  <Users className="w-5 h-5" />
+              <div className="bg-emerald-50/80 border border-emerald-100 rounded-xl sm:rounded-2xl p-3.5 sm:p-4 lg:p-3 xl:p-5 flex items-center gap-3 sm:gap-3.5 shadow-xs flex-1">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-emerald-100/90 text-emerald-700 flex items-center justify-center shrink-0">
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <div className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">5K+</div>
-                  <div className="text-xs text-slate-500 font-medium leading-tight">Happy Customers</div>
+                  <div className="text-lg sm:text-2xl font-black text-slate-900 leading-tight">5K+</div>
+                  <div className="text-[11px] sm:text-xs text-slate-500 font-medium leading-tight">Happy Customers</div>
                 </div>
               </div>
 
               {/* Stat 2 */}
-              <div className="bg-blue-50/80 border border-blue-100 rounded-2xl p-4 sm:p-5 flex items-center gap-3.5 shadow-xs flex-1">
-                <div className="w-11 h-11 rounded-xl bg-blue-100/90 text-blue-700 flex items-center justify-center shrink-0">
-                  <Settings className="w-5 h-5" />
+              <div className="bg-blue-50/80 border border-blue-100 rounded-xl sm:rounded-2xl p-3.5 sm:p-4 lg:p-3 xl:p-5 flex items-center gap-3 sm:gap-3.5 shadow-xs flex-1">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-blue-100/90 text-blue-700 flex items-center justify-center shrink-0">
+                  <Settings className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <div className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">10+</div>
-                  <div className="text-xs text-slate-500 font-medium leading-tight">Home Appliance Types</div>
+                  <div className="text-lg sm:text-2xl font-black text-slate-900 leading-tight">10+</div>
+                  <div className="text-[11px] sm:text-xs text-slate-500 font-medium leading-tight">Appliance Types</div>
                 </div>
               </div>
 
               {/* Stat 3 */}
-              <div className="bg-orange-50/80 border border-orange-100 rounded-2xl p-4 sm:p-5 flex items-center gap-3.5 shadow-xs flex-1">
-                <div className="w-11 h-11 rounded-xl bg-orange-100/90 text-orange-700 flex items-center justify-center shrink-0">
-                  <ShieldCheck className="w-5 h-5" />
+              <div className="bg-orange-50/80 border border-orange-100 rounded-xl sm:rounded-2xl p-3.5 sm:p-4 lg:p-3 xl:p-5 flex items-center gap-3 sm:gap-3.5 shadow-xs flex-1">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-orange-100/90 text-orange-700 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <div className="text-xl sm:text-2xl font-black text-slate-900 leading-tight">100%</div>
-                  <div className="text-xs text-slate-500 font-medium leading-tight">Service Satisfaction</div>
+                  <div className="text-lg sm:text-2xl font-black text-slate-900 leading-tight">100%</div>
+                  <div className="text-[11px] sm:text-xs text-slate-500 font-medium leading-tight">Service Satisfaction</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Action Buttons Row */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto">
             <Link
               href="/amc"
-              className="px-7 py-3.5 rounded-full bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-sm shadow-lg shadow-kk-teal/25 flex items-center gap-2.5 transition-all hover:-translate-y-0.5 active:scale-95"
+              className="px-5 sm:px-7 py-3 sm:py-3.5 rounded-full bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-xs sm:text-sm shadow-lg shadow-kk-teal/25 flex items-center justify-center gap-2.5 transition-all hover:-translate-y-0.5 active:scale-95 text-center"
             >
               <span>View Full AMC / CMC Plans</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/contact#book"
-              className="px-7 py-3.5 rounded-full bg-[#0b1c3d] hover:bg-slate-800 text-white font-bold text-sm shadow-md flex items-center gap-2.5 transition-all hover:-translate-y-0.5 active:scale-95"
+              className="px-5 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#0b1c3d] hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-md flex items-center justify-center gap-2.5 transition-all hover:-translate-y-0.5 active:scale-95 text-center"
             >
               <Calendar className="w-4 h-4 text-slate-300" />
               <span>Book Maintenance Contract</span>
@@ -554,18 +553,18 @@ export default function AboutPage() {
       </section>
 
       {/* 4 Core Value Pillars */}
-      <section className="py-6 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="py-6 pb-14 sm:pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {coreBenefits.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-kk-teal/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-3xl p-5 sm:p-6 lg:p-5 xl:p-6 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-kk-teal/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div className={`w-14 h-14 rounded-2xl ${item.badgeColor} flex items-center justify-center mb-5`}>
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl ${item.badgeColor} flex items-center justify-center mb-4 sm:mb-5`}>
                   {item.icon}
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2">
                   {item.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -578,30 +577,30 @@ export default function AboutPage() {
       </section>
 
       {/* Home Appliances Repair Services All Brands (3 Pillars) */}
-      <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full border-t border-slate-200/80">
-        <div className="text-center max-w-3xl mx-auto mb-14">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full border-t border-slate-200/80">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <span className="text-xs font-bold uppercase tracking-widest text-kk-teal block mb-2">
             Installation • Repairs • Maintenance
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#0b1c3d] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0b1c3d] tracking-tight">
             Home Appliances Repair Services All Brands
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-6 xl:gap-8">
           {coreServices.map((service, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-kk-teal/40 transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-3xl p-6 sm:p-7 lg:p-6 xl:p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-kk-teal/40 transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-black text-[#0b1c3d] mb-3">
+                <h3 className="text-xl sm:text-2xl font-black text-[#0b1c3d] mb-2.5 sm:mb-3">
                   {service.title}
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                   {service.desc}
                 </p>
               </div>
@@ -611,31 +610,31 @@ export default function AboutPage() {
       </section>
 
       {/* Making technology again working for you (4-step workflow) */}
-      <section className="py-16 md:py-20 bg-[#0b1c3d] text-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#0b1c3d] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-kk-teal block mb-2">
               Simple 4-Step Process
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
               Making Technology Again Working For You
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {workflowSteps.map((step, idx) => (
               <div
                 key={idx}
-                className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-7 backdrop-blur-sm hover:bg-white/10 transition-colors flex flex-col justify-between"
+                className="bg-white/5 border border-white/10 rounded-3xl p-5 sm:p-6 lg:p-5 xl:p-6 backdrop-blur-sm hover:bg-white/10 transition-colors flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center justify-between mb-4 sm:mb-5">
                     <span className="text-2xl font-black text-kk-teal">{step.num}</span>
-                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/10 flex items-center justify-center">
                       {step.icon}
                     </div>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">
+                  <h3 className="text-base sm:text-lg font-bold text-white mb-2">
                     {step.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -649,38 +648,38 @@ export default function AboutPage() {
       </section>
 
       {/* Fastest Modern Repair Service in Town + Progress Metrics */}
-      <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 lg:p-10 xl:p-12 border border-slate-200/90 shadow-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
             {/* Left side text */}
-            <div className="lg:col-span-7 space-y-5">
+            <div className="lg:col-span-7 space-y-4 sm:space-y-5">
               <span className="text-xs font-bold uppercase tracking-widest text-kk-teal block">
                 Top Rated in Pune
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#0b1c3d] tracking-tight">
                 Fastest Modern Repair Service in Town
               </h2>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
                 We provide reliable repair services for Washing Machines, Refrigerators, Air Conditioners, Microwave Ovens. For more than ten years, K K Multi Services has made houses more comfortable and appealing.
               </p>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
                 Refrigeration Home Services also handles specialist commercial and domestic home appliances, such as refrigerators, washing machines, air conditioners, and microwave geysers, so we can freshen your home with a simple adjustment. We also offer free in-home consultations, a project coordinator that oversees all phases of the process, and a satisfaction guarantee.
               </p>
             </div>
 
             {/* Right side stats */}
-            <div className="lg:col-span-5 bg-slate-50 rounded-2xl p-7 border border-slate-200 space-y-6">
-              <h3 className="text-base font-bold text-slate-900 uppercase tracking-wider text-xs">
+            <div className="lg:col-span-5 bg-slate-50 rounded-2xl p-5 sm:p-6 lg:p-6 xl:p-7 border border-slate-200 space-y-5 sm:space-y-6">
+              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
                 Performance Benchmarks
               </h3>
 
               {metrics.map((metric, idx) => (
-                <div key={idx} className="space-y-2">
-                  <div className="flex justify-between items-center text-sm font-bold text-slate-800">
+                <div key={idx} className="space-y-1.5 sm:space-y-2">
+                  <div className="flex justify-between items-center text-xs sm:text-sm font-bold text-slate-800">
                     <span>{metric.label}</span>
                     <span className="text-kk-teal font-extrabold">{metric.value}%</span>
                   </div>
-                  <div className="h-3 w-full bg-slate-200 rounded-full overflow-hidden">
+                  <div className="h-2.5 sm:h-3 w-full bg-slate-200 rounded-full overflow-hidden">
                     <div
                       className={`h-full rounded-full bg-gradient-to-r ${metric.color} transition-all duration-1000`}
                       style={{ width: `${metric.value}%` }}
@@ -694,7 +693,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why KK Multiservices & What You Will Get */}
-      <section className="relative py-16 md:py-24 bg-slate-50 overflow-hidden border-y border-slate-200/80">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-slate-50 overflow-hidden border-y border-slate-200/80">
         {/* Background Image: why_bg_img.png */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
@@ -709,9 +708,9 @@ export default function AboutPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
             {/* Left Column: Heading, description, buttons, bottom stats (7 Cols) */}
-            <div className="lg:col-span-7 xl:col-span-7 space-y-6">
+            <div className="lg:col-span-7 xl:col-span-7 space-y-5 sm:space-y-6">
               {/* Badge */}
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 border border-kk-teal/30 text-kk-teal text-xs font-bold uppercase tracking-wider shadow-xs backdrop-blur-sm">
                 <Star className="w-3.5 h-3.5 fill-kk-teal text-kk-teal" />
@@ -719,171 +718,171 @@ export default function AboutPage() {
               </div>
 
               {/* Title */}
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0b1c3d] tracking-tight leading-[1.15]">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-black text-[#0b1c3d] tracking-tight leading-[1.15]">
                 Why KK <span className="text-kk-teal">Multiservices ?</span>
               </h2>
 
               {/* Paragraphs */}
-              <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-normal max-w-xl">
+              <p className="text-xs sm:text-sm md:text-[15px] text-slate-700 leading-relaxed font-normal max-w-xl">
                 KK Multiservices makes the services easily available by saving your money and time, by connecting it with the experts. You get all sorts of repairing done by the engineers.
               </p>
-              <p className="text-sm sm:text-[15px] text-slate-700 leading-relaxed font-normal max-w-xl">
+              <p className="text-xs sm:text-sm md:text-[15px] text-slate-700 leading-relaxed font-normal max-w-xl">
                 When you call us to report a faulty appliance, you will be speaking to our friendly office team who have knowledge about handling appliance emergencies. Our technicians carry spare parts which allows them to get your appliance fixed fast and securely. The technicians chosen are well qualified to deliver the most satisfactory service at your doorstep.
               </p>
 
               {/* Action Buttons Row */}
-              <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-2">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-5 pt-2">
                 <Link
                   href="/contact#book"
-                  className="px-6 sm:px-7 py-3.5 rounded-full bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-sm shadow-lg shadow-kk-teal/30 flex items-center gap-3 transition-all hover:-translate-y-0.5 active:scale-95 group"
+                  className="w-full sm:w-auto justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-xs sm:text-sm shadow-lg shadow-kk-teal/30 flex items-center gap-3 transition-all hover:-translate-y-0.5 active:scale-95 group text-center"
                 >
                   <span>Book Doorstep Visit</span>
-                  <span className="w-6 h-6 rounded-full bg-white text-kk-teal flex items-center justify-center font-bold text-xs group-hover:translate-x-0.5 transition-transform">
+                  <span className="w-6 h-6 rounded-full bg-white text-kk-teal flex items-center justify-center font-bold text-xs group-hover:translate-x-0.5 transition-transform shrink-0">
                     <ArrowRight className="w-3.5 h-3.5 text-kk-teal" />
                   </span>
                 </Link>
 
                 <a
                   href="#how-it-works"
-                  className="inline-flex items-center gap-3 group cursor-pointer"
+                  className="inline-flex items-center justify-center sm:justify-start gap-3 group cursor-pointer"
                 >
-                  <div className="w-11 h-11 rounded-full bg-white shadow-md border border-slate-200/80 flex items-center justify-center text-kk-teal group-hover:scale-105 group-hover:border-kk-teal/50 transition-all">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white shadow-md border border-slate-200/80 flex items-center justify-center text-kk-teal group-hover:scale-105 group-hover:border-kk-teal/50 transition-all shrink-0">
                     <Play className="w-4 h-4 fill-kk-teal text-kk-teal ml-0.5" />
                   </div>
                   <div className="flex flex-col text-left">
-                    <span className="text-sm font-bold text-slate-900 group-hover:text-kk-teal transition-colors">How It Works</span>
-                    <span className="text-xs text-slate-500 font-medium">Watch Our Process</span>
+                    <span className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-kk-teal transition-colors">How It Works</span>
+                    <span className="text-[11px] sm:text-xs text-slate-500 font-medium">Watch Our Process</span>
                   </div>
                 </a>
               </div>
 
               {/* Bottom 4 Benchmarks Row */}
-              <div className="pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-100 text-cyan-600 flex items-center justify-center shrink-0">
-                    <Users className="w-5 h-5" />
+              <div className="pt-5 sm:pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-2xl">
+                <div className="flex items-center gap-2 sm:gap-2.5">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-cyan-50 border border-cyan-100 text-cyan-600 flex items-center justify-center shrink-0">
+                    <Users className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <div className="text-base sm:text-lg font-black text-slate-900 leading-tight">5K+</div>
-                    <div className="text-[11px] text-slate-500 font-medium leading-tight">Happy Customers</div>
+                    <div className="text-sm sm:text-base lg:text-lg font-black text-slate-900 leading-tight">5K+</div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium leading-tight">Happy Customers</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5">
-                  <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-100 text-teal-600 flex items-center justify-center shrink-0">
-                    <ShieldCheck className="w-5 h-5" />
+                <div className="flex items-center gap-2 sm:gap-2.5">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-teal-50 border border-teal-100 text-teal-600 flex items-center justify-center shrink-0">
+                    <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <div className="text-base sm:text-lg font-black text-slate-900 leading-tight">98%</div>
-                    <div className="text-[11px] text-slate-500 font-medium leading-tight">Service Success</div>
+                    <div className="text-sm sm:text-base lg:text-lg font-black text-slate-900 leading-tight">98%</div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium leading-tight">Service Success</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center shrink-0">
-                    <Settings className="w-5 h-5" />
+                <div className="flex items-center gap-2 sm:gap-2.5">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                    <Settings className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <div className="text-base sm:text-lg font-black text-slate-900 leading-tight">10+</div>
-                    <div className="text-[11px] text-slate-500 font-medium leading-tight">Appliance Types</div>
+                    <div className="text-sm sm:text-base lg:text-lg font-black text-slate-900 leading-tight">10+</div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium leading-tight">Appliance Types</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
-                    <Star className="w-5 h-5 fill-emerald-600" />
+                <div className="flex items-center gap-2 sm:gap-2.5">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-emerald-600" />
                   </div>
                   <div>
-                    <div className="text-base sm:text-lg font-black text-slate-900 leading-tight">4.8/5</div>
-                    <div className="text-[11px] text-slate-500 font-medium leading-tight">Customer Rating</div>
+                    <div className="text-sm sm:text-base lg:text-lg font-black text-slate-900 leading-tight">4.8/5</div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium leading-tight">Customer Rating</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Column: "What You Will Get" floating card (5 Cols) */}
-            <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end">
-              <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-2xl border border-slate-200/90 relative z-20 max-w-md w-full">
-                <h3 className="text-xl sm:text-2xl font-black text-[#0b1c3d] mb-4 pb-3 border-b border-slate-100 flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-kk-teal" />
+            <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end w-full">
+              <div className="bg-white rounded-3xl p-5 sm:p-7 shadow-2xl border border-slate-200/90 relative z-20 max-w-md w-full">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-[#0b1c3d] mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-slate-100 flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-kk-teal" />
                   <span>What You <span className="text-kk-teal">Will Get</span></span>
                 </h3>
 
                 <div className="divide-y divide-slate-100">
                   {/* 1. Skilled Technicians */}
-                  <div className="py-2.5 first:pt-0 last:pb-0 flex items-start gap-3.5">
-                    <div className="w-9 h-9 rounded-xl bg-cyan-50 border border-cyan-100/70 text-cyan-600 flex items-center justify-center shrink-0 mt-0.5">
-                      <Users className="w-4 h-4" />
+                  <div className="py-2 sm:py-2.5 first:pt-0 last:pb-0 flex items-start gap-3">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-cyan-50 border border-cyan-100/70 text-cyan-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 leading-tight">Skilled Technicians</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">Trained and experienced professionals</p>
+                      <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">Skilled Technicians</h4>
+                      <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5 leading-snug">Trained and experienced professionals</p>
                     </div>
                   </div>
 
                   {/* 2. Affordable Prices */}
-                  <div className="py-2.5 first:pt-0 last:pb-0 flex items-start gap-3.5">
-                    <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-100/70 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
-                      <Tag className="w-4 h-4" />
+                  <div className="py-2 sm:py-2.5 first:pt-0 last:pb-0 flex items-start gap-3">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-blue-50 border border-blue-100/70 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <Tag className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 leading-tight">Affordable Prices</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">Get services at genuine and transparent prices</p>
+                      <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">Affordable Prices</h4>
+                      <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5 leading-snug">Get services at genuine and transparent prices</p>
                     </div>
                   </div>
 
                   {/* 3. Upfront Pricing */}
-                  <div className="py-2.5 first:pt-0 last:pb-0 flex items-start gap-3.5">
-                    <div className="w-9 h-9 rounded-xl bg-amber-50 border border-amber-100/70 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
-                      <FileText className="w-4 h-4" />
+                  <div className="py-2 sm:py-2.5 first:pt-0 last:pb-0 flex items-start gap-3">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-50 border border-amber-100/70 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 leading-tight">Upfront Pricing</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">No surprise charges, know the cost before work begins</p>
+                      <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">Upfront Pricing</h4>
+                      <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5 leading-snug">No surprise charges, know the cost before work begins</p>
                     </div>
                   </div>
 
                   {/* 4. 100% Cashback Guarantee */}
-                  <div className="py-2.5 first:pt-0 last:pb-0 flex items-start gap-3.5">
-                    <div className="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-100/70 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
-                      <ShieldCheck className="w-4 h-4" />
+                  <div className="py-2 sm:py-2.5 first:pt-0 last:pb-0 flex items-start gap-3">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-emerald-50 border border-emerald-100/70 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 leading-tight">100% Cashback Guarantee</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">Your satisfaction is our priority</p>
+                      <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">100% Cashback Guarantee</h4>
+                      <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5 leading-snug">Your satisfaction is our priority</p>
                     </div>
                   </div>
 
                   {/* 5. Warranty on Repaired / Installed Part */}
-                  <div className="py-2.5 first:pt-0 last:pb-0 flex items-start gap-3.5">
-                    <div className="w-9 h-9 rounded-xl bg-purple-50 border border-purple-100/70 text-purple-600 flex items-center justify-center shrink-0 mt-0.5">
-                      <Wrench className="w-4 h-4" />
+                  <div className="py-2 sm:py-2.5 first:pt-0 last:pb-0 flex items-start gap-3">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-purple-50 border border-purple-100/70 text-purple-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <Wrench className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 leading-tight">Warranty on Repaired / Installed Part</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">Genuine parts with warranty</p>
+                      <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">Warranty on Repaired / Installed Part</h4>
+                      <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5 leading-snug">Genuine parts with warranty</p>
                     </div>
                   </div>
 
                   {/* 6. On-Call Support */}
-                  <div className="py-2.5 first:pt-0 last:pb-0 flex items-start gap-3.5">
-                    <div className="w-9 h-9 rounded-xl bg-rose-50 border border-rose-100/70 text-rose-600 flex items-center justify-center shrink-0 mt-0.5">
-                      <PhoneCall className="w-4 h-4" />
+                  <div className="py-2 sm:py-2.5 first:pt-0 last:pb-0 flex items-start gap-3">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-rose-50 border border-rose-100/70 text-rose-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <PhoneCall className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 leading-tight">On-Call Support</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">No need to wait for a technician, many issues can be solved over a call</p>
+                      <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">On-Call Support</h4>
+                      <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5 leading-snug">No need to wait for a technician, many issues can be solved over a call</p>
                     </div>
                   </div>
 
                   {/* 7. Expert Guidance */}
-                  <div className="py-2.5 first:pt-0 last:pb-0 flex items-start gap-3.5">
-                    <div className="w-9 h-9 rounded-xl bg-amber-50 border border-amber-100/70 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
-                      <Settings className="w-4 h-4" />
+                  <div className="py-2 sm:py-2.5 first:pt-0 last:pb-0 flex items-start gap-3">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-50 border border-amber-100/70 text-amber-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <Settings className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 leading-tight">Expert Guidance</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">We also suggest regular servicing tips to increase your appliance&apos;s life</p>
+                      <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">Expert Guidance</h4>
+                      <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5 leading-snug">We also suggest regular servicing tips to increase your appliance&apos;s life</p>
                     </div>
                   </div>
                 </div>
@@ -894,34 +893,36 @@ export default function AboutPage() {
       </section>
 
       {/* Emergency Call-To-Action */}
-      <section className="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="bg-gradient-to-r from-kk-blue via-kk-blue-light to-[#071329] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 border border-white/10">
+      <section className="py-10 sm:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="bg-gradient-to-r from-kk-blue via-kk-blue-light to-[#071329] text-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 border border-white/10">
           <div className="absolute top-0 right-0 w-80 h-80 bg-kk-teal/15 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="relative z-10 max-w-xl">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-kk-teal/20 text-kk-teal border border-kk-teal/30 text-xs font-bold mb-4 uppercase tracking-wider">
+          <div className="relative z-10 max-w-xl text-center md:text-left">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-kk-teal/20 text-kk-teal border border-kk-teal/30 text-xs font-bold mb-3 sm:mb-4 uppercase tracking-wider">
               <Clock className="w-3.5 h-3.5" /> Book Your Doorstep Visit
             </span>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-3">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black mb-2 sm:mb-3">
               Experience Hassle-Free Appliance Repair
             </h3>
-            <p className="text-sm sm:text-base text-slate-300">
+            <p className="text-xs sm:text-sm md:text-base text-slate-300">
               Get an expert technician at your door in 90 minutes. No advance payment required.
             </p>
           </div>
 
-          <div className="relative z-10 flex flex-col sm:flex-row gap-3.5 shrink-0 w-full md:w-auto">
+          <div className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-3.5 shrink-0 w-full md:w-auto">
             <Link
               href="/contact#book"
-              className="px-6 py-4 rounded-xl bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-sm transition-all shadow-lg flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-xs sm:text-sm transition-all shadow-lg flex items-center justify-center gap-2 text-center"
             >
-              Book Service Online <ArrowRight className="w-4 h-4" />
+              <span>Book Service Online</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
             <a
               href="tel:+919876543210"
-              className="px-6 py-4 rounded-xl bg-white hover:bg-slate-100 text-kk-blue font-bold text-sm transition-all shadow-lg flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-white hover:bg-slate-100 text-kk-blue font-bold text-xs sm:text-sm transition-all shadow-lg flex items-center justify-center gap-2 text-center"
             >
-              <Phone className="w-4 h-4 text-kk-red" /> Call +91 98765 43210
+              <Phone className="w-4 h-4 text-kk-red" />
+              <span>Call +91 98765 43210</span>
             </a>
           </div>
         </div>

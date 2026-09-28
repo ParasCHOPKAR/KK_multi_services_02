@@ -70,3 +70,31 @@ html {
 .animate-orbit-cw {
   animation: orbit-cw 18s linear infinite;
 }
+
+@keyframes contact-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-contact-float {
+  animation: contact-float 4.5s ease-in-out infinite;
+}
+
+@keyframes contact-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.animate-contact-entrance {
+  animation: contact-entrance 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -81,46 +81,46 @@ export default function Navbar() {
             </div>
 
             {/* Nav Links - Desktop */}
-            <div className="hidden lg:flex flex-1 justify-center items-center space-x-5 xl:space-x-7">
+            <div className="hidden lg:flex flex-1 justify-center items-center space-x-3.5 xl:space-x-6 2xl:space-x-7">
               <Link 
                 href="/" 
-                className={`text-sm transition-colors ${isHomePage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
+                className={`text-xs xl:text-sm transition-colors ${isHomePage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
               >
                 Home
               </Link>
               <Link 
                 href="/about" 
-                className={`text-sm transition-colors ${isAboutPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
+                className={`text-xs xl:text-sm transition-colors ${isAboutPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
               >
                 About
               </Link>
               <Link 
                 href="/services" 
-                className={`text-sm transition-colors ${isServicesPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
+                className={`text-xs xl:text-sm transition-colors ${isServicesPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
               >
                 Services
               </Link>
               <Link 
                 href="/amc" 
-                className={`text-sm transition-colors ${isAmcPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
+                className={`text-xs xl:text-sm transition-colors ${isAmcPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
               >
                 AMC / CMC
               </Link>
               <Link 
                 href="/areas" 
-                className={`text-sm transition-colors ${isAreasPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
+                className={`text-xs xl:text-sm transition-colors ${isAreasPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
               >
                 Areas
               </Link>
               <Link 
                 href="/blog" 
-                className={`text-sm transition-colors ${isBlogPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
+                className={`text-xs xl:text-sm transition-colors ${isBlogPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
               >
                 Blog
               </Link>
               <Link 
                 href="/contact" 
-                className={`text-sm transition-colors ${isContactPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
+                className={`text-xs xl:text-sm transition-colors ${isContactPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
               >
                 Contact
               </Link>
@@ -129,12 +129,12 @@ export default function Navbar() {
             {/* CTA & Mobile Actions */}
             <div className="flex items-center justify-end gap-2.5 sm:gap-4 md:gap-6">
               {/* Desktop Direct Phone */}
-              <div className="hidden md:flex items-center gap-6">
-                <a href="tel:+919876543210" className="flex items-center gap-2 text-white font-bold hover:text-kk-teal transition-colors">
+              <div className="hidden md:flex items-center gap-4 xl:gap-6">
+                <a href="tel:+919876543210" className="flex items-center gap-2 text-white font-bold hover:text-kk-teal transition-colors text-xs xl:text-sm">
                   <Phone className="w-4 h-4 text-kk-teal" />
                   <span className="hidden xl:block">+91 98765 43210</span>
                 </a>
-                <Link href="/contact#book" className="hidden lg:flex bg-kk-teal hover:bg-kk-teal-light text-white px-6 py-2.5 rounded-md font-bold text-sm transition-all shadow-md hover:shadow-lg items-center gap-2 active:scale-95">
+                <Link href="/contact#book" className="hidden lg:flex bg-kk-teal hover:bg-kk-teal-light text-white px-4 xl:px-6 py-2 xl:py-2.5 rounded-md font-bold text-xs xl:text-sm transition-all shadow-md hover:shadow-lg items-center gap-2 active:scale-95">
                   <div className="w-4 h-4 border-2 border-white rounded-sm flex items-center justify-center opacity-80"><div className="w-1.5 h-1.5 bg-white rounded-sm"></div></div>
                   Book a Service
                 </Link>
