@@ -30,7 +30,6 @@ interface ServiceItem {
   tagColor: string;
   image: string;
   shortDesc: string;
-  price: string;
   issues: string[];
   features: string[];
 }
@@ -44,7 +43,6 @@ const servicesList: ServiceItem[] = [
     tagColor: "bg-kk-teal text-white",
     image: "/images/appliance_ac_1789636637732.jpg",
     shortDesc: "Complete split & window AC repair, deep jet pump cleaning, gas refilling, and PCB motherboard troubleshooting.",
-    price: "₹349",
     issues: [
       "AC not cooling or slow cooling",
       "Water leakage from indoor unit",
@@ -62,7 +60,6 @@ const servicesList: ServiceItem[] = [
     tagColor: "bg-kk-blue text-white",
     image: "/images/hero_banner_ac.png",
     shortDesc: "Safe, precision wall mounting, vacuum piping, electrical wiring, and relocation of split and inverter ACs.",
-    price: "₹799",
     issues: [
       "New split / window AC installation",
       "AC relocation & uninstallation",
@@ -80,7 +77,6 @@ const servicesList: ServiceItem[] = [
     tagColor: "bg-kk-teal text-white",
     image: "/images/appliance_fridge_1789636595538.jpg",
     shortDesc: "Expert solutions for single door, double door, frost-free, and side-by-side inverter refrigerators.",
-    price: "₹299",
     issues: [
       "Refrigerator not cooling or freezer over-freezing",
       "Compressor not turning on or clicking noise",
@@ -98,7 +94,6 @@ const servicesList: ServiceItem[] = [
     tagColor: "bg-kk-red text-white",
     image: "/images/appliance_washing_machine_1789636610541.jpg",
     shortDesc: "Comprehensive repair for front-load, top-load, and semi-automatic washing machines of all leading brands.",
-    price: "₹349",
     issues: [
       "Machine drum not spinning or rotating",
       "Excessive vibration, shaking, or loud noise",
@@ -116,7 +111,6 @@ const servicesList: ServiceItem[] = [
     tagColor: "bg-amber-500 text-white",
     image: "/images/appliance_microwave_1789636624228.jpg",
     shortDesc: "Safe and certified diagnosis for solo, grill, and convection microwaves. Magnetron and touch-panel replacement.",
-    price: "₹299",
     issues: [
       "Microwave runs but food doesn't heat",
       "Sparking inside heating chamber",
@@ -134,7 +128,6 @@ const servicesList: ServiceItem[] = [
     tagColor: "bg-kk-teal text-white",
     image: "/images/appliance_geyser.jpg",
     shortDesc: "Specialized maintenance for instant and storage electric geysers. Heating element descaling and thermostat replacement.",
-    price: "₹249",
     issues: [
       "Water not heating or lukewarm temperature",
       "Electric shock or MCB tripping when switched on",
@@ -165,7 +158,7 @@ const brandLogos = [
 const faqs = [
   {
     q: "How does KK Multi Services pricing work?",
-    a: "We believe in 100% transparent pricing. Our nominal inspection visit fee is ₹199. When you approve the repair estimate, the visiting fee is completely waived! You only pay for the service and any genuine spare parts required."
+    a: "We believe in 100% transparent pricing. Our certified technician diagnoses your appliance on-site and provides an upfront, honest quote before beginning any repair work. When you approve the service estimate, the inspection charge is waived! You only pay for the repair and genuine replacement parts."
   },
   {
     q: "What warranty do you provide on repairs?",
@@ -201,50 +194,80 @@ export default function ServicesPage() {
       {/* Sticky Navbar */}
       <Navbar />
 
-      {/* Hero Header */}
-      <section className="relative bg-kk-blue text-white py-16 md:py-24 overflow-hidden border-b border-white/10">
+      {/* Hero Header - 16:4 Aspect Ratio */}
+      <section 
+        className="relative bg-kk-blue text-white w-full aspect-[16/4] min-h-[460px] md:min-h-0 flex items-center overflow-hidden border-b border-white/10"
+        style={{ aspectRatio: "16 / 4" }}
+      >
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-kk-teal/20 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute -bottom-20 left-10 w-80 h-80 bg-kk-red/15 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-4 sm:py-6 md:py-6 lg:py-8">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 mb-6">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2 sm:mb-2.5">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-kk-teal" />
             <span className="text-kk-teal">Services</span>
           </div>
 
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-bold text-white mb-6 backdrop-blur-sm">
-              <Sparkles className="w-3.5 h-3.5 text-kk-teal" />
-              <span>Multi-Brand Certified Appliance Repair</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <div className="lg:col-span-8">
+              <div className="inline-flex items-center gap-2 px-3 py-0.5 sm:py-1 rounded-full bg-white/10 border border-white/15 text-xs font-bold text-white mb-2 sm:mb-2.5 backdrop-blur-sm">
+                <Sparkles className="w-3.5 h-3.5 text-kk-teal" />
+                <span>Multi-Brand Certified Appliance Repair</span>
+              </div>
+
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-[34px] xl:text-[38px] font-black text-white tracking-tight leading-[1.15] mb-2 sm:mb-2.5">
+                Expert Home Appliance <span className="text-transparent bg-clip-text bg-gradient-to-r from-kk-teal via-cyan-300 to-white">Repair & Maintenance</span>
+              </h1>
+
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal mb-3 sm:mb-4 max-w-2xl">
+                Fast, certified doorstep repair solutions for all major household appliances across Pune & PCMC. 90-minute arrival promise, genuine spare parts, and a 90-day peace-of-mind warranty.
+              </p>
+
+              {/* Quick trust metrics */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-2.5 sm:pt-3 border-t border-white/10 max-w-2xl">
+                <div>
+                  <div className="text-lg sm:text-xl font-black text-kk-teal leading-tight">90 Mins</div>
+                  <div className="text-[11px] text-slate-400 font-medium">Doorstep Response</div>
+                </div>
+                <div>
+                  <div className="text-lg sm:text-xl font-black text-white leading-tight">90 Days</div>
+                  <div className="text-[11px] text-slate-400 font-medium">Service Warranty</div>
+                </div>
+                <div>
+                  <div className="text-lg sm:text-xl font-black text-cyan-300 leading-tight">5,000+</div>
+                  <div className="text-[11px] text-slate-400 font-medium">Appliances Fixed</div>
+                </div>
+                <div>
+                  <div className="text-lg sm:text-xl font-black text-white leading-tight">100%</div>
+                  <div className="text-[11px] text-slate-400 font-medium">Genuine Parts</div>
+                </div>
+              </div>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15] mb-6">
-              Expert Home Appliance <span className="text-transparent bg-clip-text bg-gradient-to-r from-kk-teal via-cyan-300 to-white">Repair & Maintenance</span>
-            </h1>
-
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-8">
-              Fast, certified doorstep repair solutions for all major household appliances across Pune & PCMC. 90-minute arrival promise, genuine spare parts, and a 90-day peace-of-mind warranty.
-            </p>
-
-            {/* Quick trust metrics */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-white/10">
-              <div>
-                <div className="text-2xl font-black text-kk-teal">90 Mins</div>
-                <div className="text-xs text-slate-400 font-medium">Doorstep Response</div>
-              </div>
-              <div>
-                <div className="text-2xl font-black text-white">90 Days</div>
-                <div className="text-xs text-slate-400 font-medium">Service Warranty</div>
-              </div>
-              <div>
-                <div className="text-2xl font-black text-cyan-300">5,000+</div>
-                <div className="text-xs text-slate-400 font-medium">Appliances Fixed</div>
-              </div>
-              <div>
-                <div className="text-2xl font-black text-white">100%</div>
-                <div className="text-xs text-slate-400 font-medium">Genuine Parts</div>
+            {/* Right Quick Action Box */}
+            <div className="hidden lg:flex lg:col-span-4 flex-col gap-3 justify-center items-end">
+              <div className="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl w-full max-w-xs shadow-lg">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span className="text-xs font-bold text-white uppercase tracking-wider">Technicians On Duty</span>
+                </div>
+                <p className="text-xs text-slate-300 mb-3">Available 8:00 AM - 10:00 PM across all Pune & PCMC localities.</p>
+                <div className="flex flex-col gap-2">
+                  <a
+                    href="tel:+919876543210"
+                    className="w-full py-2 px-3 rounded-xl bg-kk-teal hover:bg-kk-teal-light text-white text-xs font-bold transition-all shadow-md flex items-center justify-center gap-1.5"
+                  >
+                    <Phone className="w-3.5 h-3.5" /> Call: +91 98765 43210
+                  </a>
+                  <Link
+                    href="/contact#book"
+                    className="w-full py-2 px-3 rounded-xl bg-white/15 hover:bg-white/25 text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 border border-white/20"
+                  >
+                    Book Inspection <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -339,18 +362,19 @@ export default function ServicesPage() {
                   ))}
                 </div>
 
-                {/* Pricing & CTA */}
+                {/* Guarantee & Action CTA */}
                 <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
-                  <div>
-                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Starts at</span>
-                    <span className="text-2xl font-black text-kk-blue">{service.price}</span>
+                  <div className="flex items-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 text-kk-teal shrink-0" />
+                    <span className="text-xs font-bold text-slate-700">90-Day Warranty</span>
                   </div>
 
                   <div className="flex items-center gap-2">
                     <a 
                       href="tel:+919876543210"
-                      className="p-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-kk-blue transition-colors"
+                      className="p-2.5 sm:p-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-kk-blue transition-colors"
                       aria-label={`Call for ${service.title}`}
+                      title="Call Specialist"
                     >
                       <Phone className="w-4 h-4" />
                     </a>
