@@ -328,11 +328,11 @@ export default function ServicesPage() {
               {/* Action buttons */}
               <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-2.5 sm:mb-3">
                 <a
-                  href="tel:+919823919814"
+                  href="tel:+917823038645"
                   className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-[#0B1E3F] hover:bg-[#162d55] text-white text-xs sm:text-sm font-bold transition-all shadow-md flex items-center gap-2"
                 >
                   <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
-                  <span>Call: +91 98239 19814</span>
+                  <span>Call: +91 78230 38645</span>
                 </a>
                 <Link
                   href="/enquire"
@@ -497,7 +497,7 @@ export default function ServicesPage() {
 
                   <div className="flex items-center gap-2">
                     <a 
-                      href="tel:+919823919814"
+                      href="tel:+917823038645"
                       className="p-2.5 sm:p-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-kk-blue transition-colors"
                       aria-label={`Call for ${service.title}`}
                       title="Call Specialist"
@@ -616,13 +616,13 @@ export default function ServicesPage() {
 
           <div className="relative z-10 flex flex-col sm:flex-row gap-3.5 shrink-0 w-full md:w-auto">
             <a 
-              href="tel:+919823919814"
+              href="tel:+917823038645"
               className="px-6 py-4 rounded-xl bg-kk-red hover:bg-kk-red-light text-white font-bold text-sm transition-all shadow-lg flex items-center justify-center gap-2"
             >
-              <Phone className="w-4 h-4" /> Call Hotline: +91 98239 19814
+              <Phone className="w-4 h-4" /> Call Hotline: +91 78230 38645
             </a>
             <a 
-              href="https://wa.me/919823919814"
+              href="https://wa.me/917823038645"
               target="_blank"
               rel="noreferrer"
               className="px-6 py-4 rounded-xl bg-[#25D366] hover:bg-[#1DA851] text-white font-bold text-sm transition-all shadow-lg flex items-center justify-center gap-2"

@@ -198,7 +198,7 @@ export default function BookingModal({
     lines.push(`_Sent from website booking form_`);
 
     const fullText = lines.join("\n");
-    const targetUrl = `https://wa.me/919823919814?text=${encodeURIComponent(fullText)}`;
+    const targetUrl = `https://wa.me/917823038645?text=${encodeURIComponent(fullText)}`;
     setWaUrl(targetUrl);
 
     // Send to backend server log asynchronously with complete area metadata
@@ -349,10 +349,10 @@ export default function BookingModal({
 
               <div className="pt-2 flex flex-col sm:flex-row gap-2.5 justify-center">
                 <a
-                  href="tel:+919823919814"
+                  href="tel:+917823038645"
                   className="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-kk-red" /> Direct Call: +91 98239 19814
+                  <Phone className="w-4 h-4 text-kk-red" /> Direct Call: +91 78230 38645
                 </a>
                 <button
                   type="button"

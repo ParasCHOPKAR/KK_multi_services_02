@@ -27,7 +27,7 @@ export default function Footer() {
               <div className="space-y-3 pt-1">
                 <div className="flex items-start gap-3">
                   <Phone className="w-4 h-4 text-kk-red mt-0.5 shrink-0" />
-                  <a href="tel:+919823919814" className="text-slate-600 hover:text-kk-red text-sm font-bold">+91 98239 19814</a>
+                  <a href="tel:+917823038645" className="text-slate-600 hover:text-kk-red text-sm font-bold">+91 78230 38645</a>
                 </div>
                 <div className="flex items-start gap-3">
                   <Mail className="w-4 h-4 text-kk-blue mt-0.5 shrink-0" />
@@ -138,7 +138,7 @@ export default function Footer() {
       <div className="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 z-[50] flex flex-col gap-2.5 sm:gap-4">
         {/* Call Button */}
         <a 
-          href="tel:+919823919814" 
+          href="tel:+917823038645" 
           className="w-11 h-11 sm:w-14 sm:h-14 bg-kk-blue hover:bg-kk-blue-light text-white rounded-full flex items-center justify-center shadow-[0_8px_20px_rgba(11,28,61,0.35)] hover:scale-110 active:scale-90 transition-all duration-300 relative group"
           aria-label="Call Us Now"
         >

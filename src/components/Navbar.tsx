@@ -131,13 +131,13 @@ export default function Navbar() {
               {/* Desktop Direct Phone */}
               <div className="hidden md:flex items-center gap-4 xl:gap-6">
                 <a 
-                  href="tel:+919823919814" 
+                  href="tel:+917823038645" 
                   className={`flex items-center gap-2 font-bold hover:text-kk-teal transition-colors text-xs xl:text-sm ${
                     isLight ? "text-[#0b1c3d]" : "text-white"
                   }`}
                 >
                   <Phone className="w-4 h-4 text-kk-teal" />
-                  <span className="hidden xl:block">+91 98239 19814</span>
+                  <span className="hidden xl:block">+91 78230 38645</span>
                 </a>
                 <button 
                   type="button"
@@ -155,7 +155,7 @@ export default function Navbar() {
 
               {/* Mobile Quick Call Button */}
               <a 
-                href="tel:+919823919814" 
+                href="tel:+917823038645" 
                 className="flex lg:hidden items-center justify-center w-9 h-9 rounded-full bg-kk-teal text-white hover:bg-kk-teal-light transition-colors shadow-sm active:scale-90"
                 aria-label="Call Now"
               >
@@ -283,7 +283,7 @@ export default function Navbar() {
         {/* Drawer Bottom Actions */}
         <div className="p-5 border-t border-slate-100 bg-slate-50/50">
           <a 
-            href="tel:+919823919814" 
+            href="tel:+917823038645" 
             className="flex items-center gap-3.5 text-slate-700 font-bold hover:text-kk-blue transition-colors mb-4 p-3.5 bg-white border border-slate-200/80 rounded-xl shadow-xs"
           >
             <div className="w-10 h-10 rounded-full bg-kk-teal/10 flex items-center justify-center text-kk-teal shrink-0">
@@ -291,7 +291,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="text-[11px] text-slate-500 font-medium">24/7 Emergency Service</span>
-              <span className="text-base text-slate-900">+91 98239 19814</span>
+              <span className="text-base text-slate-900">+91 78230 38645</span>
             </div>
           </a>
           

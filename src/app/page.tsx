@@ -590,7 +590,7 @@ export default function HomePage() {
                   <div>
                     <h4 className="font-bold text-slate-900 text-xs sm:text-base mb-0.5">Call Us Directly</h4>
                     <p className="text-slate-500 text-[11px] sm:text-sm mb-0.5 sm:mb-1">Available 24/7 for emergencies</p>
-                    <a href="tel:+919823919814" className="text-kk-blue hover:text-kk-teal text-xs sm:text-base font-bold transition-colors">+91 98239 19814</a>
+                    <a href="tel:+917823038645" className="text-kk-blue hover:text-kk-teal text-xs sm:text-base font-bold transition-colors">+91 78230 38645</a>
                   </div>
                 </div>
 
@@ -628,7 +628,7 @@ export default function HomePage() {
                     </div>
                     <div className="space-y-1 sm:space-y-1.5">
                       <label htmlFor="phone" className="text-xs sm:text-sm font-bold text-slate-700">Phone Number</label>
-                      <input type="tel" id="phone" className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-kk-teal focus:ring-2 focus:ring-kk-teal/20 transition-all bg-slate-50 focus:bg-white text-sm sm:text-base" placeholder="+91 98239 19814" />
+                      <input type="tel" id="phone" className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-kk-teal focus:ring-2 focus:ring-kk-teal/20 transition-all bg-slate-50 focus:bg-white text-sm sm:text-base" placeholder="+91 78230 38645" />
                     </div>
                   </div>
 
@@ -678,7 +678,7 @@ export default function HomePage() {
               <OpenBookingButton className="bg-kk-teal hover:bg-kk-teal-light text-white px-5 sm:px-8 py-3 sm:py-3.5 lg:py-4 rounded-xl sm:rounded-md font-bold transition-all flex items-center justify-center gap-2 shadow-md active:scale-95 text-xs sm:text-base cursor-pointer">
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5" /> Book a Service
               </OpenBookingButton>
-              <a href="tel:+919823919814" className="bg-white/10 border border-white/30 hover:bg-white/20 text-white px-5 sm:px-8 py-3 sm:py-3.5 lg:py-4 rounded-xl sm:rounded-md font-bold transition-all flex items-center justify-center gap-2 backdrop-blur-xs active:scale-95 text-xs sm:text-base">
+              <a href="tel:+917823038645" className="bg-white/10 border border-white/30 hover:bg-white/20 text-white px-5 sm:px-8 py-3 sm:py-3.5 lg:py-4 rounded-xl sm:rounded-md font-bold transition-all flex items-center justify-center gap-2 backdrop-blur-xs active:scale-95 text-xs sm:text-base">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-kk-teal-light" /> Call Now
               </a>
             </div>

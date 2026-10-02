@@ -115,10 +115,10 @@ export default function ContactPage() {
               <h3 className="text-sm sm:text-base font-bold text-slate-900 mt-0.5 mb-1">Emergency Hotline</h3>
               <p className="text-xs text-slate-500 mb-2.5">Instant connection with our duty support coordinator.</p>
               <a
-                href="tel:+919823919814"
+                href="tel:+917823038645"
                 className="inline-flex items-center gap-1.5 text-xs font-extrabold text-kk-blue group-hover:text-kk-teal transition-colors"
               >
-                +91 98239 19814 <ChevronRight className="w-3.5 h-3.5" />
+                +91 78230 38645 <ChevronRight className="w-3.5 h-3.5" />
               </a>
             </div>
 
@@ -131,7 +131,7 @@ export default function ContactPage() {
               <h3 className="text-sm sm:text-base font-bold text-slate-900 mt-0.5 mb-1">WhatsApp Helpdesk</h3>
               <p className="text-xs text-slate-500 mb-2.5">Send a photo of the faulty appliance for an instant quote.</p>
               <a
-                href="https://wa.me/919823919814"
+                href="https://wa.me/917823038645"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs font-extrabold text-emerald-600 group-hover:text-emerald-700 transition-colors"
@@ -212,10 +212,10 @@ export default function ContactPage() {
 
               <div className="mt-6 pt-4 border-t border-white/10">
                 <a
-                  href="tel:+919823919814"
+                  href="tel:+917823038645"
                   className="w-full py-3 bg-white hover:bg-slate-100 text-kk-blue rounded-xl font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-sm active:scale-95"
                 >
-                  <Phone className="w-4 h-4 text-kk-red" /> Call Direct: +91 98239 19814
+                  <Phone className="w-4 h-4 text-kk-red" /> Call Direct: +91 78230 38645
                 </a>
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function ContactPage() {
                 </p>
                 <div className="space-y-3">
                   <a
-                    href="https://wa.me/919823919814"
+                    href="https://wa.me/917823038645"
                     target="_blank"
                     rel="noreferrer"
                     className="w-full py-3 px-4 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-between transition-colors border border-emerald-200"

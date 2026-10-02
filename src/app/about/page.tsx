@@ -212,11 +212,11 @@ export default function AboutPage() {
                   <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </Link>
                 <a
-                  href="tel:+919823919814"
+                  href="tel:+917823038645"
                   className="px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs sm:text-sm transition-all flex items-center gap-2 backdrop-blur-sm"
                 >
                   <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-kk-teal" />
-                  <span>Call: +91 98239 19814</span>
+                  <span>Call: +91 78230 38645</span>
                 </a>
               </div>
             </div>
@@ -918,11 +918,11 @@ export default function AboutPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="tel:+919823919814"
+              href="tel:+917823038645"
               className="w-full sm:w-auto px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-white hover:bg-slate-100 text-kk-blue font-bold text-xs sm:text-sm transition-all shadow-lg flex items-center justify-center gap-2 text-center"
             >
               <Phone className="w-4 h-4 text-kk-red" />
-              <span>Call +91 98239 19814</span>
+              <span>Call +91 78230 38645</span>
             </a>
           </div>
         </div>

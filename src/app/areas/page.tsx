@@ -1122,10 +1122,10 @@ export default function AreasPage() {
               Don't worry! KK Multi Services covers all gated societies and townships across Pune, PCMC &amp; PMRDA limits. Call our direct dispatch desk for express assignment.
             </p>
             <a
-              href="tel:+919823919814"
+              href="tel:+917823038645"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-kk-teal text-white font-bold text-sm shadow-md hover:bg-kk-teal-light transition-all active:scale-95"
             >
-              <Phone className="w-4 h-4" /> Call +91 98239 19814
+              <Phone className="w-4 h-4" /> Call +91 78230 38645
             </a>
           </div>
         ) : (
@@ -1184,7 +1184,7 @@ export default function AreasPage() {
                 {/* Card CTA */}
                 <div className="pt-3.5 border-t border-slate-100 flex items-center justify-between gap-2">
                   <a
-                    href="tel:+919823919814"
+                    href="tel:+917823038645"
                     className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-kk-blue transition-colors"
                     aria-label={`Call technician for ${item.name}`}
                     title="Direct Call Dispatch"

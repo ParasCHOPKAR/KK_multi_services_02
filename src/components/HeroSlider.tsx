@@ -316,7 +316,7 @@ export default function HeroSlider() {
                 Book a Service <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
               <a 
-                href="tel:+919823919814" 
+                href="tel:+917823038645" 
                 className={`px-5 sm:px-7 lg:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-md font-bold transition-all text-center flex items-center justify-center gap-2 active:scale-95 text-sm sm:text-base cursor-pointer ${
                   isLight
                     ? "bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 shadow-xs hover:border-kk-teal"

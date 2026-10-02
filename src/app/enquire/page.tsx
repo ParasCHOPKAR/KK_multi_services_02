@@ -111,7 +111,7 @@ export default function EnquirePage() {
     ].filter(Boolean);
 
     const waText = lines.join("\n");
-    const waUrl = `https://wa.me/919823919814?text=${encodeURIComponent(waText)}`;
+    const waUrl = `https://wa.me/917823038645?text=${encodeURIComponent(waText)}`;
     setLastWaUrl(waUrl);
 
     fetch("/api/book", {
@@ -193,7 +193,7 @@ export default function EnquirePage() {
                 )}
                 <div className="flex flex-col sm:flex-row justify-center gap-3">
                   <a
-                    href="tel:+919823919814"
+                    href="tel:+917823038645"
                     className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-md active:scale-95"
                   >
                     <Phone className="w-4 h-4" /> Call For Urgent Status
