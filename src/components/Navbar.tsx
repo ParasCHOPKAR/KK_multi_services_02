@@ -4,12 +4,19 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Phone, ArrowRight, Menu, X } from "lucide-react";
+import { Phone, ArrowRight, Menu, X, Calendar } from "lucide-react";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import { useTheme } from "@/context/ThemeContext";
+import { useBookingModal } from "@/context/BookingModalContext";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const pathname = usePathname();
+  const { theme, mounted } = useTheme();
+  const { openBookingModal } = useBookingModal();
+  const isLight = mounted && theme === "light";
+
   const isHomePage = pathname === "/";
   const isAboutPage = pathname === "/about";
   const isContactPage = pathname === "/contact";
@@ -17,6 +24,18 @@ export default function Navbar() {
   const isAreasPage = pathname === "/areas";
   const isAmcPage = pathname === "/amc";
   const isBlogPage = pathname === "/blog";
+  const isEnquirePage = pathname === "/enquire";
+
+  const navLinks = [
+    { href: "/", label: "Home", active: isHomePage },
+    { href: "/about", label: "About", active: isAboutPage },
+    { href: "/services", label: "Services", active: isServicesPage },
+    { href: "/amc", label: "AMC / CMC", active: isAmcPage },
+    { href: "/areas", label: "Areas", active: isAreasPage },
+    { href: "/blog", label: "Blog", active: isBlogPage },
+    { href: "/contact", label: "Contact", active: isContactPage },
+    { href: "/enquire", label: "Enquire", active: isEnquirePage },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +67,13 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="relative w-full bg-kk-blue border-b border-white/10 sticky top-0 z-50">
+      <nav 
+        className={`relative w-full sticky top-0 z-50 transition-colors duration-300 ${
+          isLight 
+            ? "bg-white border-b border-slate-200/80 shadow-xs" 
+            : "bg-kk-blue border-b border-white/10"
+        }`}
+      >
         {/* Scroll Progress Line */}
         <div 
           className="absolute top-0 left-0 w-full h-[3px] md:h-1 bg-white/10 pointer-events-none overflow-hidden" 
@@ -70,7 +95,7 @@ export default function Navbar() {
             <div className="flex shrink-0">
               <Link href="/" className="flex items-center">
                 <Image 
-                  src="/images/Logo_02.png" 
+                  src={isLight ? "/images/logo_Light_01.png" : "/images/Logo_02.png"} 
                   alt="KK Multi Services Logo" 
                   width={240} 
                   height={70} 
@@ -82,67 +107,55 @@ export default function Navbar() {
 
             {/* Nav Links - Desktop */}
             <div className="hidden lg:flex flex-1 justify-center items-center space-x-3.5 xl:space-x-6 2xl:space-x-7">
-              <Link 
-                href="/" 
-                className={`text-xs xl:text-sm transition-colors ${isHomePage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
-              >
-                Home
-              </Link>
-              <Link 
-                href="/about" 
-                className={`text-xs xl:text-sm transition-colors ${isAboutPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
-              >
-                About
-              </Link>
-              <Link 
-                href="/services" 
-                className={`text-xs xl:text-sm transition-colors ${isServicesPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
-              >
-                Services
-              </Link>
-              <Link 
-                href="/amc" 
-                className={`text-xs xl:text-sm transition-colors ${isAmcPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
-              >
-                AMC / CMC
-              </Link>
-              <Link 
-                href="/areas" 
-                className={`text-xs xl:text-sm transition-colors ${isAreasPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
-              >
-                Areas
-              </Link>
-              <Link 
-                href="/blog" 
-                className={`text-xs xl:text-sm transition-colors ${isBlogPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
-              >
-                Blog
-              </Link>
-              <Link 
-                href="/contact" 
-                className={`text-xs xl:text-sm transition-colors ${isContactPage ? "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal" : "font-medium text-slate-300 hover:text-white"}`}
-              >
-                Contact
-              </Link>
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.href}
+                  href={link.href} 
+                  className={`text-xs xl:text-sm transition-colors ${
+                    link.active 
+                      ? isLight
+                        ? "font-bold text-[#0b1c3d] relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-kk-teal"
+                        : "font-bold text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-[var(--kk-active-underline)]"
+                      : isLight
+                        ? "font-medium text-slate-700 hover:text-kk-teal"
+                        : "font-medium text-slate-300 hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
 
             {/* CTA & Mobile Actions */}
             <div className="flex items-center justify-end gap-2.5 sm:gap-4 md:gap-6">
               {/* Desktop Direct Phone */}
               <div className="hidden md:flex items-center gap-4 xl:gap-6">
-                <a href="tel:+919876543210" className="flex items-center gap-2 text-white font-bold hover:text-kk-teal transition-colors text-xs xl:text-sm">
+                <a 
+                  href="tel:+919823919814" 
+                  className={`flex items-center gap-2 font-bold hover:text-kk-teal transition-colors text-xs xl:text-sm ${
+                    isLight ? "text-[#0b1c3d]" : "text-white"
+                  }`}
+                >
                   <Phone className="w-4 h-4 text-kk-teal" />
-                  <span className="hidden xl:block">+91 98765 43210</span>
+                  <span className="hidden xl:block">+91 98239 19814</span>
                 </a>
-                <Link href="/contact#book" className="hidden lg:flex bg-kk-teal hover:bg-kk-teal-light text-white px-4 xl:px-6 py-2 xl:py-2.5 rounded-md font-bold text-xs xl:text-sm transition-all shadow-md hover:shadow-lg items-center gap-2 active:scale-95">
-                  <div className="w-4 h-4 border-2 border-white rounded-sm flex items-center justify-center opacity-80"><div className="w-1.5 h-1.5 bg-white rounded-sm"></div></div>
-                  Book a Service
-                </Link>
+                <button 
+                  type="button"
+                  onClick={() => openBookingModal()}
+                  className={`hidden lg:flex px-4 xl:px-6 py-2 xl:py-2.5 rounded-lg font-bold text-xs xl:text-sm transition-all shadow-md hover:shadow-lg items-center gap-2 active:scale-95 cursor-pointer ${
+                    isLight
+                      ? "bg-kk-teal text-white hover:bg-[#008f84]"
+                      : "bg-[var(--kk-nav-cta-bg)] text-[var(--kk-nav-cta-text)] hover:opacity-95"
+                  }`}
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span>Book a Service</span>
+                </button>
               </div>
 
               {/* Mobile Quick Call Button */}
               <a 
-                href="tel:+919876543210" 
+                href="tel:+919823919814" 
                 className="flex lg:hidden items-center justify-center w-9 h-9 rounded-full bg-kk-teal text-white hover:bg-kk-teal-light transition-colors shadow-sm active:scale-90"
                 aria-label="Call Now"
               >
@@ -151,7 +164,9 @@ export default function Navbar() {
               
               {/* Mobile Menu Button */}
               <button 
-                className="lg:hidden p-2 text-white hover:text-kk-teal transition-colors rounded-lg focus:outline-none focus:ring-2 focus:ring-kk-teal/40"
+                className={`lg:hidden p-2 transition-colors rounded-lg focus:outline-none focus:ring-2 focus:ring-kk-teal/40 ${
+                  isLight ? "text-slate-800 hover:text-kk-teal" : "text-white hover:text-kk-teal"
+                }`}
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label="Open navigation menu"
               >
@@ -176,7 +191,13 @@ export default function Navbar() {
       >
         <div>
           <div className="flex justify-between items-center p-5 border-b border-slate-100">
-            <Image src="/images/Logo_02.png" alt="KK Multi Services Logo" width={150} height={44} className="h-9 w-auto object-contain" />
+            <Image 
+              src={isLight ? "/images/logo_Light_01.png" : "/images/Logo_02.png"} 
+              alt="KK Multi Services Logo" 
+              width={150} 
+              height={44} 
+              className="h-9 w-auto object-contain" 
+            />
             <button 
               className="p-2 text-slate-500 hover:text-kk-red transition-colors bg-slate-100 hover:bg-slate-200 rounded-full"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -243,13 +264,26 @@ export default function Navbar() {
               <span>Contact Us</span>
               {isContactPage && <span className="w-1.5 h-1.5 rounded-full bg-kk-teal"></span>}
             </Link>
+            <Link 
+              href="/enquire" 
+              className={`px-4 py-3 rounded-xl text-base transition-colors flex items-center justify-between ${isEnquirePage ? "font-bold text-kk-teal bg-kk-teal/10" : "font-medium text-slate-700 hover:bg-slate-50"}`} 
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span>Enquire & Book</span>
+              {isEnquirePage && <span className="w-1.5 h-1.5 rounded-full bg-kk-teal"></span>}
+            </Link>
+          </div>
+
+          {/* Mobile Theme Switcher */}
+          <div className="px-5 pb-4">
+            <ThemeSwitcher variant="mobile" />
           </div>
         </div>
 
         {/* Drawer Bottom Actions */}
         <div className="p-5 border-t border-slate-100 bg-slate-50/50">
           <a 
-            href="tel:+919876543210" 
+            href="tel:+919823919814" 
             className="flex items-center gap-3.5 text-slate-700 font-bold hover:text-kk-blue transition-colors mb-4 p-3.5 bg-white border border-slate-200/80 rounded-xl shadow-xs"
           >
             <div className="w-10 h-10 rounded-full bg-kk-teal/10 flex items-center justify-center text-kk-teal shrink-0">
@@ -257,17 +291,20 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="text-[11px] text-slate-500 font-medium">24/7 Emergency Service</span>
-              <span className="text-base text-slate-900">+91 98765 43210</span>
+              <span className="text-base text-slate-900">+91 98239 19814</span>
             </div>
           </a>
           
-          <Link 
-            href="/contact#book" 
-            className="bg-kk-teal hover:bg-kk-teal-light text-white px-5 py-3.5 rounded-xl font-bold text-base transition-all shadow-md flex items-center justify-center gap-2 w-full text-center active:scale-95" 
-            onClick={() => setIsMobileMenuOpen(false)}
+          <button 
+            type="button"
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              openBookingModal();
+            }}
+            className="bg-kk-teal hover:bg-kk-teal-light text-white px-5 py-3.5 rounded-xl font-bold text-base transition-all shadow-md flex items-center justify-center gap-2 w-full text-center active:scale-95 cursor-pointer" 
           >
             Book a Service <ArrowRight className="w-4 h-4" />
-          </Link>
+          </button>
         </div>
       </div>
     </>

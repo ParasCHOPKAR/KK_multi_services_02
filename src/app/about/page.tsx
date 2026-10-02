@@ -148,7 +148,7 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero Header */}
-      <section 
+      <section
         className="relative bg-kk-blue text-white w-full min-h-[460px] md:min-h-[400px] lg:min-h-[380px] xl:min-h-[420px] py-6 sm:py-8 lg:py-10 flex items-center overflow-hidden border-b border-white/10"
       >
         {/* Ambient background glow */}
@@ -212,11 +212,11 @@ export default function AboutPage() {
                   <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </Link>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919823919814"
                   className="px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs sm:text-sm transition-all flex items-center gap-2 backdrop-blur-sm"
                 >
                   <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-kk-teal" />
-                  <span>Call: +91 98765 43210</span>
+                  <span>Call: +91 98239 19814</span>
                 </a>
               </div>
             </div>
@@ -264,7 +264,7 @@ export default function AboutPage() {
           <span className="text-xs font-bold uppercase tracking-widest text-kk-teal block mb-2">
             100% GENUINE OEM SPARES
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0b1c3d] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-kk-blue tracking-tight">
             Factory-Compliant Diagnosis Across All Brands
           </h2>
         </div>
@@ -349,7 +349,7 @@ export default function AboutPage() {
               </div>
 
               {/* Headline */}
-              <h2 className="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-[40px] font-black text-[#0b1c3d] tracking-tight leading-[1.18]">
+              <h2 className="text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-[40px] font-black text-kk-blue tracking-tight leading-[1.18]">
                 AMC (Annual <span className="text-kk-teal">Maintenance</span><br />
                 Contract) / CMC (Comprehensive<br />
                 <span className="text-kk-teal">Maintenance Contract</span>) Services
@@ -410,10 +410,10 @@ export default function AboutPage() {
             <div className="lg:col-span-5 bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-5 xl:p-7 border border-slate-200 shadow-md flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 sm:gap-3.5 mb-3.5 sm:mb-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#0b1c3d] text-white flex items-center justify-center shrink-0 shadow-sm">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-kk-blue text-white flex items-center justify-center shrink-0 shadow-sm">
                     <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-black text-[#0b1c3d]">
+                  <h3 className="text-lg sm:text-xl font-black text-kk-blue">
                     AMC — Annual<br />Maintenance Contract
                   </h3>
                 </div>
@@ -460,7 +460,7 @@ export default function AboutPage() {
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-kk-teal text-white flex items-center justify-center shrink-0 shadow-sm">
                     <Settings className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-black text-[#0b1c3d]">
+                  <h3 className="text-lg sm:text-xl font-black text-kk-blue">
                     CMC — Comprehensive<br />Maintenance Contract
                   </h3>
                 </div>
@@ -503,7 +503,7 @@ export default function AboutPage() {
                   <Users className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <div className="text-lg sm:text-2xl font-black text-slate-900 leading-tight">5K+</div>
+                  <div className="text-lg sm:text-2xl font-black text-slate-900 leading-tight">20K+</div>
                   <div className="text-[11px] sm:text-xs text-slate-500 font-medium leading-tight">Happy Customers</div>
                 </div>
               </div>
@@ -511,11 +511,11 @@ export default function AboutPage() {
               {/* Stat 2 */}
               <div className="bg-blue-50/80 border border-blue-100 rounded-xl sm:rounded-2xl p-3.5 sm:p-4 lg:p-3 xl:p-5 flex items-center gap-3 sm:gap-3.5 shadow-xs flex-1">
                 <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-blue-100/90 text-blue-700 flex items-center justify-center shrink-0">
-                  <Settings className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <Award className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <div className="text-lg sm:text-2xl font-black text-slate-900 leading-tight">10+</div>
-                  <div className="text-[11px] sm:text-xs text-slate-500 font-medium leading-tight">Appliance Types</div>
+                  <div className="text-lg sm:text-2xl font-black text-slate-900 leading-tight">9+</div>
+                  <div className="text-[11px] sm:text-xs text-slate-500 font-medium leading-tight">Years of Experience</div>
                 </div>
               </div>
 
@@ -542,8 +542,8 @@ export default function AboutPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/contact#book"
-              className="px-5 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#0b1c3d] hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-md flex items-center justify-center gap-2.5 transition-all hover:-translate-y-0.5 active:scale-95 text-center"
+              href="/enquire"
+              className="px-5 sm:px-7 py-3 sm:py-3.5 rounded-full bg-kk-blue hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-md flex items-center justify-center gap-2.5 transition-all hover:-translate-y-0.5 active:scale-95 text-center"
             >
               <Calendar className="w-4 h-4 text-slate-300" />
               <span>Book Maintenance Contract</span>
@@ -582,7 +582,7 @@ export default function AboutPage() {
           <span className="text-xs font-bold uppercase tracking-widest text-kk-teal block mb-2">
             Installation • Repairs • Maintenance
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0b1c3d] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-kk-blue tracking-tight">
             Home Appliances Repair Services All Brands
           </h2>
         </div>
@@ -597,7 +597,7 @@ export default function AboutPage() {
                 <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-black text-[#0b1c3d] mb-2.5 sm:mb-3">
+                <h3 className="text-xl sm:text-2xl font-black text-kk-blue mb-2.5 sm:mb-3">
                   {service.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -610,7 +610,7 @@ export default function AboutPage() {
       </section>
 
       {/* Making technology again working for you (4-step workflow) */}
-      <section className="py-12 sm:py-16 md:py-20 bg-[#0b1c3d] text-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-kk-blue text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-kk-teal block mb-2">
@@ -656,7 +656,7 @@ export default function AboutPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-kk-teal block">
                 Top Rated in Pune
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#0b1c3d] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-kk-blue tracking-tight">
                 Fastest Modern Repair Service in Town
               </h2>
               <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
@@ -718,7 +718,7 @@ export default function AboutPage() {
               </div>
 
               {/* Title */}
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-black text-[#0b1c3d] tracking-tight leading-[1.15]">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-black text-kk-blue tracking-tight leading-[1.15]">
                 Why KK <span className="text-kk-teal">Multiservices ?</span>
               </h2>
 
@@ -733,7 +733,7 @@ export default function AboutPage() {
               {/* Action Buttons Row */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-3.5 sm:gap-5 pt-2">
                 <Link
-                  href="/contact#book"
+                  href="/enquire"
                   className="w-full sm:w-auto justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-xs sm:text-sm shadow-lg shadow-kk-teal/30 flex items-center gap-3 transition-all hover:-translate-y-0.5 active:scale-95 group text-center"
                 >
                   <span>Book Doorstep Visit</span>
@@ -763,7 +763,7 @@ export default function AboutPage() {
                     <Users className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <div className="text-sm sm:text-base lg:text-lg font-black text-slate-900 leading-tight">5K+</div>
+                    <div className="text-sm sm:text-base lg:text-lg font-black text-slate-900 leading-tight">20K+</div>
                     <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium leading-tight">Happy Customers</div>
                   </div>
                 </div>
@@ -780,11 +780,11 @@ export default function AboutPage() {
 
                 <div className="flex items-center gap-2 sm:gap-2.5">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center shrink-0">
-                    <Settings className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <Award className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <div className="text-sm sm:text-base lg:text-lg font-black text-slate-900 leading-tight">10+</div>
-                    <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium leading-tight">Appliance Types</div>
+                    <div className="text-sm sm:text-base lg:text-lg font-black text-slate-900 leading-tight">9+</div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-500 font-medium leading-tight">Years of Experience</div>
                   </div>
                 </div>
 
@@ -803,7 +803,7 @@ export default function AboutPage() {
             {/* Right Column: "What You Will Get" floating card (5 Cols) */}
             <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end w-full">
               <div className="bg-white rounded-3xl p-5 sm:p-7 shadow-2xl border border-slate-200/90 relative z-20 max-w-md w-full">
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-[#0b1c3d] mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-slate-100 flex items-center gap-2">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-kk-blue mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-slate-100 flex items-center gap-2">
                   <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-kk-teal" />
                   <span>What You <span className="text-kk-teal">Will Get</span></span>
                 </h3>
@@ -894,7 +894,7 @@ export default function AboutPage() {
 
       {/* Emergency Call-To-Action */}
       <section className="py-10 sm:py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="bg-gradient-to-r from-kk-blue via-kk-blue-light to-[#071329] text-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 border border-white/10">
+        <div className="bg-gradient-to-r from-kk-blue via-kk-blue-light to-kk-dark text-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 border border-white/10">
           <div className="absolute top-0 right-0 w-80 h-80 bg-kk-teal/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-xl text-center md:text-left">
@@ -911,18 +911,18 @@ export default function AboutPage() {
 
           <div className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-3.5 shrink-0 w-full md:w-auto">
             <Link
-              href="/contact#book"
+              href="/enquire"
               className="w-full sm:w-auto px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-xs sm:text-sm transition-all shadow-lg flex items-center justify-center gap-2 text-center"
             >
               <span>Book Service Online</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="tel:+919876543210"
+              href="tel:+919823919814"
               className="w-full sm:w-auto px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-white hover:bg-slate-100 text-kk-blue font-bold text-xs sm:text-sm transition-all shadow-lg flex items-center justify-center gap-2 text-center"
             >
               <Phone className="w-4 h-4 text-kk-red" />
-              <span>Call +91 98765 43210</span>
+              <span>Call +91 98239 19814</span>
             </a>
           </div>
         </div>

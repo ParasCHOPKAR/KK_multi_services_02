@@ -95,7 +95,7 @@ export default function BlogPage() {
               {/* Quick Action CTAs */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3">
                 <Link
-                  href="/contact#book"
+                  href="/enquire"
                   className="px-5 sm:px-6 py-2 sm:py-2.5 rounded-full bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-xs sm:text-sm shadow-lg shadow-kk-teal/30 hover:-translate-y-0.5 transition-all flex items-center gap-2 active:scale-95 text-center"
                 >
                   <Wrench className="w-3.5 h-3.5" />
@@ -112,11 +112,11 @@ export default function BlogPage() {
                 </Link>
 
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919823919814"
                   className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white text-kk-blue hover:bg-slate-100 font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shadow-md hover:-translate-y-0.5 text-center"
                 >
                   <Phone className="w-3.5 h-3.5 text-kk-red" />
-                  <span>Call: +91 98765 43210</span>
+                  <span>Call: +91 98239 19814</span>
                 </a>
               </div>
             </div>
@@ -179,7 +179,7 @@ export default function BlogPage() {
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-200/80 text-kk-teal text-xs font-black uppercase tracking-wider mb-2">
               <Sparkles className="w-3.5 h-3.5 text-kk-teal" /> What to expect
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#0b1c3d] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-black text-kk-blue tracking-tight">
               Topics We Are Preparing For You
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-2">
@@ -224,17 +224,17 @@ export default function BlogPage() {
 
           <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
             <Link
-              href="/contact#book"
+              href="/enquire"
               className="px-6 py-3 rounded-xl bg-kk-teal hover:bg-kk-teal-light text-white font-bold text-xs sm:text-sm shadow-md transition-all active:scale-95"
             >
               Book Service Online
             </Link>
             <a
-              href="tel:+919876543210"
+              href="tel:+919823919814"
               className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs sm:text-sm transition-all flex items-center gap-2"
             >
               <Phone className="w-4 h-4 text-kk-teal" />
-              <span>+91 98765 43210</span>
+              <span>+91 98239 19814</span>
             </a>
           </div>
         </div>
