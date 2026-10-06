@@ -963,10 +963,9 @@ export default function AreasPage() {
       {/* Sticky Navbar */}
       <Navbar />
 
-      {/* Hero Header - 16:4 Aspect Ratio */}
+      {/* Hero Header */}
       <section
-        className="relative text-white w-full aspect-[16/7] xs:aspect-[16/6] sm:aspect-[16/5] lg:aspect-[16/4] min-h-[420px] md:min-h-[360px] lg:min-h-0 flex items-center overflow-hidden bg-[#020712]"
-        style={{ aspectRatio: "16 / 4" }}
+        className="relative text-white w-full min-h-[480px] sm:min-h-[400px] lg:min-h-0 lg:aspect-[16/5] xl:aspect-[16/4] flex items-center overflow-hidden bg-[#020712]"
       >
         {/* Background Image: hero_img_04.png */}
         <div className="absolute inset-0 z-0">
@@ -979,12 +978,12 @@ export default function AreasPage() {
             className="object-cover object-center"
           />
           {/* Left side background shadow till the text - rich deep contrast for crystal-clear readability */}
-          <div className="absolute inset-y-0 left-0 w-full sm:w-[58%] lg:w-[48%] bg-gradient-to-r from-[#020712] via-[#020712]/95 via-[#020712]/75 to-transparent pointer-events-none z-[1]" />
-          <div className="absolute inset-y-0 left-0 w-72 sm:w-[44%] bg-[#020712]/70 blur-3xl pointer-events-none z-[1]" />
+          <div className="absolute inset-y-0 left-0 w-full sm:w-[70%] lg:w-[55%] bg-gradient-to-r from-[#020712] via-[#020712]/95 via-[#020712]/80 to-transparent pointer-events-none z-[1]" />
+          <div className="absolute inset-y-0 left-0 w-full sm:w-[50%] bg-[#020712]/70 blur-3xl pointer-events-none z-[1]" />
         </div>
 
         {/* Location Pins Overlay directly on the map */}
-        <div className="absolute inset-0 z-10 pointer-events-none">
+        <div className="absolute inset-0 z-10 pointer-events-none hidden lg:block">
           <div className="relative w-full h-full max-w-[2172px] mx-auto">
             {heroMapPins.map((pin) => (
               <button
@@ -1053,10 +1052,10 @@ export default function AreasPage() {
                 <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                 <input
                   type="text"
-                  placeholder="Search locality, landmark or PIN (e.g. Balewadi High Street, Wakad)..."
+                  placeholder="Search locality, landmark or PIN..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-16 py-2.5 sm:py-3 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-xs sm:text-sm font-medium focus:outline-none shadow-lg shadow-black/25"
+                  className="w-full pl-10 pr-16 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none shadow-lg shadow-black/25"
                 />
                 {searchQuery && (
                   <button
