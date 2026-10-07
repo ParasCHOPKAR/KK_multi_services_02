@@ -47,8 +47,35 @@ export default function RootLayout({
             `,
           }}
         />
+        <script type="text/javascript" dangerouslySetInnerHTML={{
+          __html: `
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi,mr',
+                autoDisplay: false
+              }, 'google_translate_element');
+            }
+          `
+        }} />
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .goog-te-banner-frame { display: none !important; }
+            iframe.skiptranslate { display: none !important; }
+            .goog-te-menu-value { display: none !important; }
+            .goog-tooltip { display: none !important; }
+            .goog-tooltip:hover { display: none !important; }
+            .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+            body { top: 0 !important; position: static !important; }
+            #google_translate_element { display: none !important; }
+            .VIpgJd-ZVi9od-aZ2wEe-wOHMyf { display: none !important; }
+            .VIpgJd-ZVi9od-ORHb-OEVmcd { display: none !important; }
+          `
+        }} />
       </head>
       <body className="font-sans min-h-screen flex flex-col bg-slate-50 text-slate-900">
+        <div id="google_translate_element"></div>
         <ThemeProvider>
           <BookingModalProvider>
             {children}

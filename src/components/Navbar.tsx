@@ -8,6 +8,7 @@ import { Phone, ArrowRight, Menu, X, Calendar } from "lucide-react";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { useTheme } from "@/context/ThemeContext";
 import { useBookingModal } from "@/context/BookingModalContext";
+import LanguageSelector from "@/components/LanguageSelector";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -128,6 +129,8 @@ export default function Navbar() {
 
             {/* CTA & Mobile Actions */}
             <div className="flex items-center justify-end gap-2.5 sm:gap-4 md:gap-6">
+              <LanguageSelector />
+              
               {/* Desktop Direct Phone */}
               <div className="hidden md:flex items-center gap-4 xl:gap-6">
                 <a 
